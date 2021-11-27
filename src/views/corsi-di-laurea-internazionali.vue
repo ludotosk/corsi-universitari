@@ -142,40 +142,7 @@
 </template>
 
 <script>
-import axios from "axios";
-import { useMeta } from "vue-meta";
-
 export default {
-  setup() {
-    useMeta({
-      // if no subcomponents specify a metaInfo.title, this title will be used
-      title: "Corsi di laurea internazionali [lista]",
-
-      meta: [
-        {
-          name: "description",
-          content:
-            "In questo sito potrai trovare rapidamente l'elenco dei corsi di laurea in internazionali, tutti raggruppati su una comoda tabella.",
-        },
-        {
-          name: "keywords",
-          content: "corsi di laurea internazionali",
-        },
-      ],
-      link: [
-        {
-          rel: "canonical",
-          href: "https://www.corsiuniversitari.info/corsi-di-laurea-internazionali",
-        },
-        /*       {
-        rel: "preload",
-        href:
-          "https://www.corsiuniversitari.info/api/corsi?e=1&_sort=u,a,t&_order=asc,desc,desc",
-        as: "fetch",
-      }, */
-      ],
-    });
-  },
   data() {
     return {
       filters: {
