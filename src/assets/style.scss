@@ -1,0 +1,48 @@
+/*! `Custom` Bootstrap 4 theme */
+@import url(https://fonts.googleapis.com/css?family=Quicksand:200,300,400,700&display=swap);
+
+$primary:#2f3c48;
+$secondary:#6f7f8c;
+$success:#fcf8e3;
+$danger:#cc330d;
+$info:#5c8f94;
+$warning:#6e9fa5;
+$light:#eceeec;
+$dark:#1e2b37;
+
+$family-sans-serif: "Quicksand", sans-serif;
+
+@import "node_modules/bulma/bulma.sass";
+
+.vt-pagination{
+    @extend .pagination;
+}
+
+.page-item {
+    @extend .pagination-link;
+    color: #2f3c48;
+    background-color: #fff;
+}
+
+.page-link {
+    color: #cc330d;   
+}
+
+.page-item.active  {
+    @extend .is-current;
+    color: #fff;
+    background-color: #2f3c48;
+    border-color: #2f3c48;
+}
+
+.active {
+    @extend .is-active;
+}
+
+.hidden {
+    @extend .is-hidden;
+}
+
+.danger {
+    @extend .has-text-danger;
+}
