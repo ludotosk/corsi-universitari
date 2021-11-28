@@ -12,13 +12,15 @@
     <meta name="keywords" content="corsi di laurea internazionali">
     <link rel="canonical" href="https://www.corsiuniversitari.info/corsi-di-laurea-internazionali">
     <link rel="preload" href="https://json-corsi-fastify.herokuapp.com/corsi?inter=1" as="fetch" crossorigin="anonymous">
+    <link href="https://www.googletagmanager.com" rel="preconnect">
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WSK0D83FEJ&amp;l=dataLayer"></script>
 </head>
 
 <body>
     <div id="app"></div>
     <script type="module">
-        import { createApp } from 'vue'; import App from './App.vue'; import SmartTable from 'vuejs-smart-table'; import '../src/assets/style.scss'; import VueGtag from "vue-gtag"; createApp(App).use(SmartTable).use(VueGtag, { property: { id: "G-WSK0D83FEJ" }
-        }).mount('#app')
+        import { createApp } from 'vue'; import App from './App.vue'; import SmartTable from 'vuejs-smart-table'; import '../src/assets/style.scss'; createApp(App).use(SmartTable).mount('#app'); window.dataLayer = window.dataLayer || []; function gtag() { window.dataLayer.push(arguments);
+        } gtag('js', new Date()); gtag('config', 'G-WSK0D83FEJ');
     </script>
 </body>
 

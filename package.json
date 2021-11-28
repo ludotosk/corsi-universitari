@@ -9,7 +9,6 @@
     "dependencies": {
         "bulma": "^0.9.3",
         "vue": "^3.2.16",
-        "vue-gtag": "^2.0.1",
         "vuejs-smart-table": "^1.0.0-beta.5"
     },
     "devDependencies": {
@@ -17,6 +16,7 @@
         "@vitejs/plugin-vue": "^1.9.3",
         "postcss": "^8.4.1",
         "sass": "^1.43.5",
-        "vite": "^2.6.4"
+        "vite": "^2.6.4",
+        "vite-plugin-pwa": "^0.11.8"
     }
 }
