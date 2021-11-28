@@ -1,0 +1,21 @@
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = "dist"
+  exclude = [
+    './dist/app.html',
+    './dist/cookie-policy.html',
+    './dist/contattami.html', 
+    './dist/comunita.html',
+    './dist/tabella.html',
+    './dist/simulazioni-test.html',
+    './dist/link.html'
+  ]
+
+[[redirects]]
+  from = '/api/*'
+  to = 'https://json-corsi-fastify.herokuapp.com/:splat'
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
