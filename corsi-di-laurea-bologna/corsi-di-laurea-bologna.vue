@@ -2,7 +2,7 @@
   <div class="container is-fullhd">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
-      Corsi di laurea a {{ uni }} [2021]
+      Università a {{ uni }}, Corsi di laurea [2021/2022]
     </h1>
     <h2 class="has-text-centered is-size-3 has-text-dark has-text-left">
       Quali sono i corsi di laurea a {{ uni }}? Ecco la lista!
@@ -123,13 +123,7 @@
       <tbody v-for="corso in corsi" :key="corso.n">
         <tr data-view>
           <td>
-            <a
-              :href="corso.h"
-              target="_blank"
-              rel="noopener"
-              class="has-text-danger"
-              >{{ corso.n }}</a
-            >
+            <a :href="corso.h" target="_blank" rel="noopener">{{ corso.n }}</a>
           </td>
           <!--     <td>{{ corso.t }}</td>
           <td>{{ corso.a }}</td> -->
@@ -155,7 +149,7 @@ export default {
       cambiaTabella: false,
     };
   },
-    async mounted() {
+  async mounted() {
     try {
       fetch("https://json-corsi-fastify.herokuapp.com/corsi?s=BOLOGNA")
         .then((response) => response.json())

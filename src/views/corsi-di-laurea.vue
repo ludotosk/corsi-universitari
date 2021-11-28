@@ -2,7 +2,7 @@
   <div class="container is-fullhd">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
-      Tutti i Corsi di Laurea esistenti [2021]
+      Tutti i Corsi di Laurea esistenti [2021/2022]
     </h1>
     <h2 class="has-text-centered is-size-3 has-text-dark has-text-left">
       Quali sono tutti i corsi di laurea?
@@ -112,27 +112,7 @@
 </template>
 
 <script>
-import { defineComponent, computed, reactive } from 'vue'
-import { useHead } from '@vueuse/head'
-
-export default defineComponent({
-  setup() {
-    const siteData = reactive({
-      title: `My website`,
-      description: `My beautiful website`,
-    })
-
-    useHead({
-      // Can be static or computed
-      title: computed(() => siteData.title),
-      meta: [
-        {
-          name: `description`,
-          content: computed(() => siteData.description),
-        },
-      ],
-    })
-  },
+export default {
   data() {
     return {
       corsi: [],
@@ -155,5 +135,5 @@ export default defineComponent({
       console.log(e);
     }
   },
-})
+};
 </script>

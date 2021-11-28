@@ -34,7 +34,7 @@
                         <a class="navbar-item" href="/corsi-di-laurea-padova">Corsi di laurea Padova
                         </a>
                         <a class="navbar-item" href="/corsi-di-laurea-roma">Corsi di laurea Roma</a>
-                        <a class="navbar-item" href="/corsi-di-laurea-hrefrino">Corsi di laurea Torino
+                        <a class="navbar-item" href="/corsi-di-laurea-torino">Corsi di laurea Torino
                         </a>
                         <a class="navbar-item" href="/corsi-di-laurea-bari">Corsi di laurea Bari</a>
                         <a class="navbar-item" href="/corsi-di-laurea-pisa">Corsi di laurea Pisa</a>
@@ -49,7 +49,7 @@
                 <a href="https://www.corsiuniversitari.info/link" target="_blank" class="navbar-item">Test medicina</a>
             </div>
             <div class="navbar-end">
-                <a href="/comunita" class="navbar-item"><img src="/img/whatsapp-svgrepo-com.svg" alt="pagina gruppo whatsapp" height="40" width="40" /> Gruppo whatsapp</a>
+                <a href="https://www.corsiuniversitari.info/link" class="navbar-item"><img src="/img/whatsapp-svgrepo-com.svg" alt="pagina gruppo whatsapp" height="40" width="40" /> Gruppo whatsapp</a>
             </div>
         </div>
     </nav>
