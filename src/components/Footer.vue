@@ -16,12 +16,12 @@
         </p>
       </div>
     </footer>
-    <div class="modal">
+    <div class="modal" v-bind:class="{ 'is-active': isActive }">
       <div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
           <p class="modal-card-title">Unisciti ai nostri gruppi!</p>
-          <button class="delete" aria-label="close" id="delete"></button>
+          <button class="delete" aria-label="close"  v-on:click="attiva()"></button>
         </header>
         <section class="modal-card-body">
           <h2 class="has-text-centered is-size-4 has-text-dark has-text-left">
@@ -61,7 +61,7 @@
             class="button is-primary"
             >Link di accesso</a
           >
-          <button class="button" id="chiudi-modal">Chiudi</button>
+          <button class="button" v-on:click="attiva()">Chiudi</button>
         </footer>
       </div>
     </div>
