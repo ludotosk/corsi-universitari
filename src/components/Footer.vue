@@ -3,61 +3,65 @@
     <footer class="has-background-dark has-text-light footer">
       <div class="content has-text-weight-medium has-text-centered">
         <p>
-          Sito a cura di Ludovico Toscano. Contatti email:
+          Sviluppato a Morgex - Valle d'Aosta da Ludovico Toscano. Contatti:
           <a href="mailto:corsiuniversitari@ludotosk.it" class="has-text-danger"
             >corsiuniversitari@ludotosk.it</a
           >
           oppure
-          <router-link to="/contattami" class="has-text-danger"
-            >usa questa pagina</router-link
-          >. Per leggere l'informativa sui cookie
-          <router-link to="/cookie-policy" class="has-text-danger">
-            visita questa pagina</router-link
+          <a href="/contattami" class="has-text-danger">usa questa pagina</a>.
+          Per leggere l'informativa sui cookie
+          <a href="/cookie-policy" class="has-text-danger">
+            visita questa pagina</a
           >.
         </p>
       </div>
     </footer>
-    <div class="modal" v-bind:class="{ 'is-active': isActive }">
+    <div class="modal">
       <div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
-          <p class="modal-card-title">Unisciti al gruppo Whatsapp!</p>
-          <button
-            class="delete"
-            aria-label="close"
-            v-on:click="attiva()"
-          ></button>
+          <p class="modal-card-title">Unisciti ai nostri gruppi!</p>
+          <button class="delete" aria-label="close" id="delete"></button>
         </header>
         <section class="modal-card-body">
           <h2 class="has-text-centered is-size-4 has-text-dark has-text-left">
-            Perché accedere al gruppo di corsiuniversitari.info?
+            Come possiamo aiutarti?
           </h2>
           <hr />
           <p>
-            <mark class="has-background-success">Perché</mark> puoi trovare
-            altre <strong>persone come te che cercano il corso giusto</strong>.
+            Abbiamo un
+            <mark class="has-background-success">gruppo di orientamento</mark>,
+            un
+            <mark class="has-background-success"
+              >gruppo dedicato ai test d'ingresso</mark
+            >
+            e in fine una
+            <mark class="has-background-success">pagina Instagram per</mark> la
+            preparazione a <mark class="has-background-success">medicina</mark>!
           </p>
           <p>
-            <mark class="has-background-success">Perché</mark> a volte è la
-            semplice mancanza di informazione a fare la differenza.
+            Nel gruppo di <strong>orientamento</strong> troverai centania di
+            persone che come te cercando di entrare nel corso giusto.
           </p>
           <p>
-            <mark class="has-background-success">Perché</mark> puoi
-            <strong>confrontarti con chi già fa quel corso di laurea</strong>!
+            Nel gruppo per i <strong>test d'ingresso</strong> troverai persone
+            che come te si vogliono preparare ai <strong>tolc</strong> o al
+            <strong>test di medicina</strong>. Inoltre abbiamo un
+            <strong>simulatore per i test</strong>.
           </p>
           <p>
-            <mark class="has-background-success">Perché</mark> i
-            <strong
-              >manifesti universitari sono tutti i uguali e solo uno studente
-              conosce la vita della sede universitaria</strong
-            >.
+            Infine l'account <strong>Instagram per medicina</strong> conterrà
+            informazioni utili per aiutarti a passare il test.
           </p>
         </section>
         <footer class="modal-card-foot">
-          <a href="https://chat.whatsapp.com/EiygmP7oY944HWFgwuejLD"
-            ><button class="button is-primary">Entra nel gruppo</button></a
+          <a
+            href="https://www.corsiuniversitari.info/link"
+            target="_blank"
+            class="button is-primary"
+            >Link di accesso</a
           >
-          <button class="button" v-on:click="attiva()">Chiudi</button>
+          <button class="button" id="chiudi-modal">Chiudi</button>
         </footer>
       </div>
     </div>

@@ -1,167 +1,59 @@
 <template>
   <div>
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <router-link to="/" class="navbar-item">
-          <img
-            src="/img/icons/android-chrome-192x192.png"
-            height="32"
-            width="32"
-            alt="logo corsiuniversitati.info"
-          />
-        </router-link>
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item">
+                <img src="/img/icons/android-chrome-192x192.png" height="32" width="32" alt="logo corsiuniversitati.info" />
+            </a>
 
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbar"
-          v-on:click="isActive = !isActive"
-          v-bind:class="{ active: isActive }"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div id="navbar" class="navbar-menu" v-bind:class="{ active: isActive }">
-        <div
-          class="navbar-start has-text-weight-medium"
-          style="flex-grow: 1; justify-content: center"
-        >
-          <router-link to="/" class="navbar-item"
-            >Tutti i corsi di laurea</router-link
-          >
-          <!-- 
-          <router-link to="/citta" class="navbar-item">Città</router-link>
-          <router-link to="/area-accademica-uni" class="navbar-item"
-            >Aree accademiche / Uni</router-link
-          > -->
-          <router-link to="/corsi-di-laurea-online" class="navbar-item"
-            >Corsi online</router-link
-          >
-          <router-link to="/corsi-di-laurea-internazionali" class="navbar-item"
-            >Corsi internazionali</router-link
-          >
-          <router-link to="/corsi-di-laurea-in-inglese" class="navbar-item"
-            >In inglese</router-link
-          >
-          <div class="navbar-item has-dropdown is-hoverable">
-            <p class="navbar-link">Corsi per livello</p>
-
-            <div class="navbar-dropdown">
-              <!--         <router-link to="/corsi-di-laurea-triennale" class="navbar-item"
-                >Corsi di laurea triennali</router-link
-              >
-              <router-link to="/corsi-di-laurea-magistrale" class="navbar-item"
-                >Corsi di laurea magistrali</router-link
-              > -->
-              <router-link
-                to="/corsi-di-laurea-magistrale-a-ciclo-unico"
-                class="navbar-item"
-                >Corsi di laurea magistrali a ciclo unico</router-link
-              >
-              <!--         <router-link
-                to="/corsi-di-laurea-triennali-ad-accesso-libero"
-                class="navbar-item"
-                >Corsi di laurea triennali ad accesso libero</router-link
-              > -->
-              <hr class="navbar-divider" />
-              <router-link to="/lauree-triennali-elenco" class="navbar-item"
-                >Lista corsi triennali</router-link
-              >
-              <router-link
-                to="/lista-corsi-di-laurea-magistrale"
-                class="navbar-item"
-                >Lista corsi magistrali</router-link
-              >
-              <!--         <router-link
-                to="/lista-corsi-di-laurea-magistrale-a-ciclo-unico"
-                class="navbar-item"
-                >Lista corsi magistrali a ciclo unico</router-link
-              > -->
-              <router-link
-                to="/lista-corsi-di-laurea-triennale-ad-accesso-libero"
-                class="navbar-item"
-                >Lista corsi triennali ad accesso libero</router-link
-              >
-            </div>
-          </div>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <p class="navbar-link">Post laurea</p>
-            <div class="navbar-dropdown is-right">
-              <!--          <router-link to="/master-primo-livello" class="navbar-item"
-                >Master di primo livello</router-link
-              >
-              <router-link to="/master-secondo-livello" class="navbar-item"
-                >Master di secondo livello</router-link
-              > -->
-              <!--        <router-link
-                to="/perfezionamento-alta-formazione"
-                class="navbar-item"
-                >Corsi Perfezionamento - Alta Formazione</router-link
-              >
-              <hr class="navbar-divider" /> -->
-              <router-link to="/lista-master-primo-livello" class="navbar-item"
-                >Lista master primo livello</router-link
-              >
-              <router-link
-                to="/lista-master-secondo-livello"
-                class="navbar-item"
-                >Lista master secondo livello</router-link
-              ><router-link
-                to="/lista-perfezionamento-alta-formazione"
-                class="navbar-item"
-                >Lista Corsi Perfezionamento - Alta Formazione</router-link
-              >
-            </div>
-          </div>
-          <router-link
-            to="/lista-corsi-di-laurea-senza-test"
-            class="navbar-item"
-            >Corsi senza test</router-link
-          >
-          <!--        <div class="navbar-item has-dropdown is-hoverable">
-            <p class="navbar-link">No test</p>
-            <div class="navbar-dropdown is-right">
-              <router-link to="/corsi-di-laurea-senza-test" class="navbar-item"
-                >Corsi senza test</router-link
-              >
-              <hr class="navbar-divider" />
-              <router-link
-                to="/lista-corsi-di-laurea-senza-test"
-                class="navbar-item"
-                >Lista corsi senza test</router-link
-              >
-            </div>
-          </div> -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
 
-        <div class="navbar-end">
-          <!--           <a href="https://youtu.be/awDfiW3z5GY" class="navbar-item"
-            ><img
-              src="/img/youtube.svg"
-              alt="link a youtube"
-              height="40"
-              width="40"
-          /> YouTube </a> -->
-          <router-link to="/comunita" class="navbar-item"
-            ><img
-              src="/img/whatsapp-svgrepo-com.svg"
-              alt="pagina gruppo whatsapp"
-              height="40"
-              width="40"
-            />
-            Gruppo whatsapp</router-link
-          >
+        <div id="navbar" class="navbar-menu">
+            <div class="navbar-start has-text-weight-medium" style="flex-grow: 1; justify-content: center">
+                <a href="/" class="navbar-item">Tutti i corsi di laurea</a>
+                <a href="/corsi-di-laurea-online" class="navbar-item">Corsi online</a>
+                <a href="/corsi-di-laurea-in-inglese" class="navbar-item">In inglese</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <p class="navbar-link">Città</p>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="/corsi-di-laurea-bologna">Corsi di laurea Bologna
+                        </a>
+                        <a class="navbar-item" href="/corsi-di-laurea-firenze">Corsi di laurea Firenze
+                        </a>
+                        <a class="navbar-item" href="/corsi-di-laurea-milano">Corsi di laurea Milano
+                        </a>
+                        <a class="navbar-item" href="/corsi-di-laurea-padova">Corsi di laurea Padova
+                        </a>
+                        <a class="navbar-item" href="/corsi-di-laurea-roma">Corsi di laurea Roma</a>
+                        <a class="navbar-item" href="/corsi-di-laurea-hrefrino">Corsi di laurea Torino
+                        </a>
+                        <a class="navbar-item" href="/corsi-di-laurea-bari">Corsi di laurea Bari</a>
+                        <a class="navbar-item" href="/corsi-di-laurea-pisa">Corsi di laurea Pisa</a>
+                        <a class="navbar-item" href="/corsi-di-laurea-napoli">Corsi di laurea Napoli
+                        </a>
+                        <a class="navbar-item" href="/corsi-di-laurea-palermo">Corsi di laurea Palermo
+                        </a>
+                    </div>
+                </div>
+                <a href="/lauree-triennali-elenco" class="navbar-item">Triennali</a>
+                <a href="/lista-corsi-di-laurea-senza-test" class="navbar-item">Corsi senza test</a>
+                <a href="https://www.corsiuniversitari.info/link" target="_blank" class="navbar-item">Test medicina</a>
+            </div>
+            <div class="navbar-end">
+                <a href="/comunita" class="navbar-item"><img src="/img/whatsapp-svgrepo-com.svg" alt="pagina gruppo whatsapp" height="40" width="40" /> Gruppo whatsapp</a>
+            </div>
         </div>
-      </div>
     </nav>
+
   </div>
 </template>
 
