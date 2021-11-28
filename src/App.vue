@@ -1,4 +1,9 @@
 <script>
+import Nav from "../src/components/Navbar.vue";
+import Panel from "../src/components/Panellink.vue";
+import Footer from "../src/components/Footer.vue"
+import Corsi from "./views/corsi-di-laurea.vue"
+
 export default {
   async beforeUpdate() {
     try {
@@ -7,12 +12,18 @@ export default {
       //nulla
     }
   },
+  components: {
+    Nav,
+    Panel,
+    Footer,
+    Corsi
+  },
 };
 </script>
 
 <template>
-    <router-view name="header"></router-view>
-    <router-view style="min-height: 100vh"></router-view>
-    <router-view name="panel"></router-view>
-    <router-view name="footer"></router-view>
+  <Nav />
+  <Corsi style="min-height: 100vh" />
+  <Panel />
+  <Footer />
 </template>
