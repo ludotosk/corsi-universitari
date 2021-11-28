@@ -1,5 +1,4 @@
-//import { createApp } from 'vue'
-import { createApp as createClientApp, createSSRApp } from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import SmartTable from 'vuejs-smart-table'

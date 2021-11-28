@@ -3,13 +3,12 @@
     "version": "0.0.0",
     "scripts": {
         "dev": "vite",
-        "build": "vite build && presite ./dist",
+        "build": "vite build",
         "serve": "vite preview"
     },
     "dependencies": {
         "@vueuse/head": "^0.7.2",
         "bulma": "^0.9.3",
-        "presite": "^2.1.2",
         "vue": "^3.2.16",
         "vue-gtag": "^2.0.1",
         "vue-router": "^4.0.12",
@@ -18,7 +17,6 @@
     "devDependencies": {
         "@fullhuman/postcss-purgecss": "^4.0.3",
         "@vitejs/plugin-vue": "^1.9.3",
-        "@vue/server-renderer": "^3.2.23",
         "postcss": "^8.4.1",
         "sass": "^1.43.5",
         "vite": "^2.6.4"
