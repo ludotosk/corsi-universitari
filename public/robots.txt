@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /App
+Disallow: /app
+Disallow: /guida
+Disallow: /contattami
+Disallow: /cookie-policy
+Disallow: /comunita
+Disallow: /tabella
+
+Sitemap: http://www.corsiuniversitari.info/sitemap.xml
