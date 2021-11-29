@@ -4,13 +4,10 @@ package = "@netlify/plugin-sitemap"
   [plugins.inputs]
   buildDir = "dist"
   exclude = [
-    './dist/app.html',
-    './dist/cookie-policy.html',
-    './dist/contattami.html', 
-    './dist/comunita.html',
-    './dist/tabella.html',
-    './dist/simulazioni-test.html',
-    './dist/link.html'
+    './dist/cookie-policy/index.html',
+    './dist/contattami/index.html', 
+    './dist/link/index.html',
+    './dist/tabella/index.html'
   ]
 
 [[redirects]]
