@@ -124,4 +124,8 @@ export default {
     font-size: 1rem;
   }
 }
+
+html {
+  overflow: hidden;
+}
 </style>
