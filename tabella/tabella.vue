@@ -73,7 +73,7 @@
       :maxPageLinks="4"
     />
     <a
-      href="https://www.corsiuniversitari.info/tutti-i-corsi-di-laurea"
+      href="https://www.corsiuniversitari.info"
       class="has-text-danger"
       target="_blank"
       id="link-sito"
