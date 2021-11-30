@@ -2,7 +2,7 @@
   <div class="container is-fullhd">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
-      Migliori università Italiane 2021/2022
+      Migliori università Italiane 2021
     </h1>
     <h2 class="has-text-centered is-size-3 has-text-dark has-text-left">
       Qual'è la migliore università in Italia?
@@ -15,7 +15,7 @@
         class="has-text-danger"
         target="_blank"
         href="https://www.censis.it/formazione/la-classifica-censis-delle-universit%C3%A0-italiane-edizione-2021/20222021/2022/gli-atenei-statali"
-        >il rapporto Censis 2021/2022</a
+        >il rapporto Censis 2021</a
       >! Prima di lasciarvi alla tabella vi faccio notare come non ci siano i
       dati di occupabilità per le università non statali, quindi nella colonna
       troverete 0 come punteggio. Come potrete vedere il punteggio va da 0 a 110
@@ -301,7 +301,7 @@ import corsi from "../src/assets/migliori-uni.json";
 export default {
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: "Migliori università italiane 2021/2022 ✅",
+    title: "Migliori università italiane 2021/2022",
     // all titles will be injected into this template
     titleTemplate: "%s | Classifica Censis",
     meta: [

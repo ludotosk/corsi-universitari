@@ -9,7 +9,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                ing: resolve(__dirname, 'corsi-di-laurea-in-inglese/index.html'),
+                'corsi-di-laurea-in-inglese': resolve(__dirname, 'corsi-di-laurea-in-inglese/index.html'),
                 on: resolve(__dirname, 'corsi-di-laurea-online/index.html'),
                 bolo: resolve(__dirname, 'corsi-di-laurea-bologna/index.html'),
                 fire: resolve(__dirname, 'corsi-di-laurea-firenze/index.html'),
