@@ -7,5 +7,7 @@ Disallow: /contattami
 Disallow: /cookie-policy
 Disallow: /comunita
 Disallow: /tabella
+Disallow: /corsi-di-laurea-online
+Disallow: /migliori-universita-medicina
 
 Sitemap: http://www.corsiuniversitari.info/sitemap.xml
