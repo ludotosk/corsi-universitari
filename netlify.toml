@@ -11,6 +11,13 @@ package = "@netlify/plugin-sitemap"
   ]
 
 [[redirects]]
+  from = "/corsi-di-laurea-magistrale-a-ciclo-unico/"
+  to = "/lauree-triennali-elenco/"
+  status = 301
+  force = true
+
+
+[[redirects]]
   from = '/api/*'
   to = 'https://json-corsi-fastify.herokuapp.com/:splat'
   status = 200
