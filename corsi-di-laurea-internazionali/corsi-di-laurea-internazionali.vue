@@ -2,7 +2,7 @@
   <div class="container is-fullhd">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
-      Corsi di laurea {{ uni }} [lista]
+      Corsi di laurea {{ uni }} 🌍 [lista]
     </h1>
     <h2 class="has-text-centered is-size-3 has-text-dark has-text-left">
       Quali sono le lauree {{ uni }}? Ecco la lista!
