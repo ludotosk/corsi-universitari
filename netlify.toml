@@ -7,7 +7,9 @@ package = "@netlify/plugin-sitemap"
     './dist/cookie-policy/index.html',
     './dist/contattami/index.html', 
     './dist/link/index.html',
-    './dist/tabella/index.html'
+    './dist/tabella/index.html',
+    './dist/migliori-universita-medicina/index.html',
+    './dist/corsi-di-laurea-online/index.html'
   ]
 
 [[redirects]]
