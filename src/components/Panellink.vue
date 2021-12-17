@@ -16,7 +16,7 @@
         <a
           @click="inter"
           v-bind:class="{ active: !hideInter, danger: hideInter }"
-          >Lauree internazionali</a
+          >Lauree internazionali e online</a
         >
       </p>
       <div v-bind:class="{ hidden: hideLivello }">
@@ -61,6 +61,9 @@
             class="has-text-black-ter"
             >Corsi di laurea a carattere internazionale</a
           >
+        </div>
+        <div class="panel-block">
+          <a href="/corsi-di-laurea-online" class="has-text-black-ter">Corsi di laurea online</a>
         </div>
       </div>
     </nav>
