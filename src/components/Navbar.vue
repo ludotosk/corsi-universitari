@@ -36,7 +36,7 @@
           style="flex-grow: 1; justify-content: center"
         >
           <a href="/" class="navbar-item">Tutti i corsi di laurea</a>
-          <a href="/corsi-di-laurea-online" class="navbar-item">Corsi online</a>
+          <a href="/migliori-universita-italiane" class="navbar-item">Migliori Universita</a>
           <a href="/corsi-di-laurea-in-inglese" class="navbar-item"
             >In inglese</a
           >
