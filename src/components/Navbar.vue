@@ -35,8 +35,8 @@
           class="navbar-start has-text-weight-medium"
           style="flex-grow: 1; justify-content: center"
         >
-          <a href="/" class="navbar-item">Tutti i corsi di laurea</a>
-          <a href="/migliori-universita-italiane" class="navbar-item">Migliori Universita</a>
+          <a href="/" class="navbar-item">Tutte le lauree</a>
+          <a href="/migliori-universita-italiane" class="navbar-item">Migliori Uni</a>
           <a href="/corsi-di-laurea-in-inglese" class="navbar-item"
             >In inglese</a
           >
@@ -80,10 +80,10 @@
             >Corsi senza test</a
           >
           <a
-            href="https://www.corsiuniversitari.info/link"
+            href="https://youtube.com/playlist?list=PLbKSR3tmtJaXYgINO1RVWskZvekfWIRYr"
             target="_blank"
             class="navbar-item"
-            >Test medicina</a
+            >Critica alla scuola</a
           >
         </div>
         <div class="navbar-end">
@@ -94,7 +94,7 @@
               height="40"
               width="40"
             />
-            Gruppo whatsapp</a
+            Gruppi e Test medicina</a
           >
         </div>
       </div>
