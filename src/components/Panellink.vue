@@ -6,7 +6,7 @@
         <a
           @click="livello"
           v-bind:class="{ active: !hideLivello, danger: hideLivello }"
-          >Corsi per livello</a
+          >Per livello</a
         >
         <a
           @click="classifica"
@@ -16,7 +16,7 @@
         <a
           @click="inter"
           v-bind:class="{ active: !hideInter, danger: hideInter }"
-          >Lauree internazionali e online</a
+          >Internazionali e online</a
         >
       </p>
       <div v-bind:class="{ hidden: hideLivello }">
