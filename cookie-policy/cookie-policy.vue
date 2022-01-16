@@ -143,6 +143,56 @@
       individuare le modalità di gestione dei cookie.
     </p>
     <br />
+    <h2 class="is-size-3">COOKIE DI PROFILAZIONE</h2>
+    <p>
+      I cookie di profilazione vengono utilizzati per raggruppare gli utenti in
+      categorie omogenee in base, ad esempio, alle preferenze dell'utente. Tali
+      cookie possono essere utilizzati, tra l’altro, per inviare messaggi
+      pubblicitari conformi al comportamento dell’utente in rete ed ai suoi
+      interessi di navigazione. In conformità con la normativa applicabile, è
+      necessario il previo consenso degli utenti per l'installazione dei cookie
+      di profilazione. L’utente è libero di prestare il proprio consenso
+      all'installazione dei cookie di profilazione e revocarlo in qualsiasi
+      momento, attraverso la tabella di seguito o tramite la CMP (come
+      specificato di seguito nella cookie policy) senza che la possibilità di
+      visitare il Sito e fruire dei suoi contenuti sia compromessa. Tuttavia,
+      anche nel caso in cui decidessi di non prestare il tuo consenso all'uso
+      dei cookie di profilazione, la pubblicità verrà comunque visualizzata sui
+      Siti, ma potrebbe non essere in linea con i tuoi interessi o preferenze.
+      Nel caso in cui l’utente presti il suo consenso all'installazione dei
+      cookie di profilazione, il Titolare terrà traccia di tale consenso
+      attraverso un cookie tecnico specifico. In questo modo, sarà possibile
+      evitare di riproporre il cookie banner durante le future visite al Sito.
+    </p>
+    <p>
+      I cookie di profilazione sono installati dal Titolare e da soggetti terzi,
+      che agiscono in qualità di autonomi titolari del trattamento dei dati
+      (cookie di terze parti). In particolare, i cookie di profilazione che
+      possono essere installati tramite i Siti, previo consenso dell’utente,
+      consentono di perseguire le seguenti finalità:
+    </p>
+    <ul>
+      <li>
+        I fornitori di terze parti, tra cui Google, utilizzano cookie per
+        pubblicare annunci in base alle precedenti visite di un utente al tuo o
+        ad altri siti web.
+      </li>
+      <li>
+        L'utilizzo dei cookie per la pubblicità consente a Google e ai suoi
+        partner di pubblicare annunci per i tuoi utenti in base alla loro visita
+        ai tuoi siti e/o ad altri siti Internet.
+      </li>
+      <li>
+        Gli utenti possono scegliere di disattivare la pubblicità
+        personalizzata, visitando la pagina
+        <a href="https://www.google.com/settings/ads" class="has-text-danger">Impostazioni annunci</a>.
+        In alternativa, puoi offrire agli utenti la possibilità di disattivare
+        l'uso di cookie da parte di fornitori di terze parti per la pubblicità
+        personalizzata, visitando la pagina
+        <a href="http://www.aboutads.info/choices/" class="has-text-danger">www.aboutads.info</a>.
+      </li>
+    </ul>
+    <br>
     <p><strong>Titolare del sito web</strong></p>
     <p>Ludovico Toscano</p>
     <p>
