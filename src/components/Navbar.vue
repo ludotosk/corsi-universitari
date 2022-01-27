@@ -36,7 +36,9 @@
           style="flex-grow: 1; justify-content: center"
         >
           <a href="/" class="navbar-item">Tutte le lauree</a>
-          <a href="/migliori-universita-italiane" class="navbar-item">Migliori Uni</a>
+          <a href="/migliori-universita-italiane" class="navbar-item"
+            >Migliori Uni</a
+          >
           <a href="/corsi-di-laurea-in-inglese" class="navbar-item"
             >In inglese</a
           >
@@ -79,13 +81,7 @@
           <a href="/lista-corsi-di-laurea-senza-test" class="navbar-item"
             >Corsi senza test</a
           >
-          <a
-            href="https://youtube.com/playlist?list=PLbKSR3tmtJaXYgINO1RVWskZvekfWIRYr"
-            target="_blank"
-            class="navbar-item"
-            >Critica alla scuola</a
-          >
-        </div>
+          <a href="/migliori-corsi-di-laurea" class="navbar-item">Migliori lauree</a>
         <div class="navbar-end">
           <a href="https://www.corsiuniversitari.info/link" class="navbar-item"
             ><img
