@@ -81,7 +81,13 @@
           <a href="/lista-corsi-di-laurea-senza-test" class="navbar-item"
             >Corsi senza test</a
           >
-          <a href="/migliori-corsi-di-laurea" class="navbar-item">Migliori lauree</a>
+          <a
+            href="/migliori-corsi-di-laurea"
+            target="_blank"
+            class="navbar-item"
+            >Migliori lauree</a
+          >
+        </div>
         <div class="navbar-end">
           <a href="https://www.corsiuniversitari.info/link" class="navbar-item"
             ><img
