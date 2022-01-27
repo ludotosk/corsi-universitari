@@ -30,6 +30,11 @@
         </div>
       </div>
     </div>
+    <div
+      id="adsgoeshere"
+      style="background: #e1e1e1; text-align: center"
+      v-html="adsenseContent"
+    ></div>
     <!--    <p>
       <strong>Attenzione!</strong> per eseguire la ricerca serve il nome del
       corso corretto. Es. <strong>biotecnologie</strong> si trova sotto
@@ -38,11 +43,6 @@
       comune a tutti i nomi. Il resto della <strong>guida</strong> è sotto la
       tabella.
       </p> -->
-    <div
-      id="adsgoeshere"
-      style="background: #ffffff; text-align: center"
-      v-html="adsenseContent"
-    ></div>
     <br />
     <VTable
       :data="corsi"
