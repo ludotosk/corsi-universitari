@@ -112,6 +112,7 @@
       <strong>test d'ingresso </strong>o è a numero programmato. In quel caso il
       corso sarà segnato come test sì, in caso di accesso libero come test no.
     </p>
+    <br>
     <div
       id="adsbox"
       style="text-align: center"
