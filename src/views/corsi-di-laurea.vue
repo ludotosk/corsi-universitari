@@ -38,6 +38,11 @@
       comune a tutti i nomi. Il resto della <strong>guida</strong> è sotto la
       tabella.
     </p> -->
+    <div
+      id="adsgoeshere"
+      style="background: #ffffff; padding-top: 60px; text-align: center"
+      v-html="adsenseContent"
+    ></div>
     <br />
     <VTable
       :data="corsi"
@@ -121,6 +126,7 @@ export default {
       },
       currentPage: 1,
       totalPages: 0,
+      adsenseContent: "",
     };
   },
   async mounted() {
@@ -134,6 +140,9 @@ export default {
     } catch (e) {
       console.log(e);
     }
+    this.adsenseContent = document.getElementById(
+      "divadsensedisplaynone"
+    ).innerHTML;
   },
 };
 </script>
