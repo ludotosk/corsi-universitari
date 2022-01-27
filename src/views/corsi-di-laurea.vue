@@ -32,7 +32,7 @@
     </div>
     <div
       id="adsgoeshere"
-      style="background: #e1e1e1; text-align: center"
+      style="text-align: center"
       v-html="adsenseContent"
     ></div>
     <!--    <p>
