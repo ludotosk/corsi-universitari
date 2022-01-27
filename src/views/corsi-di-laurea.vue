@@ -40,7 +40,7 @@
     </p> -->
     <div
       id="adsgoeshere"
-      style="background: #ffffff; padding-top: 60px; text-align: center"
+      style="background: #ffffff; text-align: center"
       v-html="adsenseContent"
     ></div>
     <br />
