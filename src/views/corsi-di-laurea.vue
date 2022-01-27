@@ -8,7 +8,7 @@
       Quali sono tutti i corsi di laurea?
     </h2>
     <!--     <hr />
-    <p>Quali sono <strong>tutti i corsi di laurea Italiani esistenti</strong>? Qui puoi trovare la <strong>lista completa</strong> aggiornata <strong>all'anno accademico 2020/2021</strong>!</p> -->
+      <p>Quali sono <strong>tutti i corsi di laurea Italiani esistenti</strong>? Qui puoi trovare la <strong>lista completa</strong> aggiornata <strong>all'anno accademico 2020/2021</strong>!</p> -->
     <br />
     <div class="field is-horizontal">
       <div class="field-body">
@@ -37,7 +37,7 @@
       risultato corretto inserire <strong>"biotec"</strong>. Cioè la parte
       comune a tutti i nomi. Il resto della <strong>guida</strong> è sotto la
       tabella.
-    </p> -->
+      </p> -->
     <div
       id="adsgoeshere"
       style="background: #ffffff; text-align: center"
