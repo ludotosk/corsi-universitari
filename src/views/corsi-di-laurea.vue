@@ -112,6 +112,11 @@
       <strong>test d'ingresso </strong>o è a numero programmato. In quel caso il
       corso sarà segnato come test sì, in caso di accesso libero come test no.
     </p>
+    <div
+      id="adsbox"
+      style="text-align: center"
+      v-html="adsenseBox"
+    ></div>
     <br />
   </div>
 </template>
@@ -127,6 +132,7 @@ export default {
       currentPage: 1,
       totalPages: 0,
       adsenseContent: "",
+      adsenseBox: "",
     };
   },
   async mounted() {
@@ -143,6 +149,7 @@ export default {
     this.adsenseContent = document.getElementById(
       "divadsensedisplaynone"
     ).innerHTML;
+    this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
   },
 };
 </script>
