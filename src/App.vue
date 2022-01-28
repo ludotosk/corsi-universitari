@@ -7,7 +7,7 @@ import Corsi from "./views/corsi-di-laurea.vue"
 export default {
   async beforeUpdate() {
     try {
-      document.getElementById("navbar").setAttribute("class", `navbar-menu`);
+      document.getElementById("navMenu").setAttribute("class", `navbar-menu`);
     } catch (e) {
       //nulla
     }

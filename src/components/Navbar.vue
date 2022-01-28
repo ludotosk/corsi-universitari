@@ -30,7 +30,7 @@
         </a>
       </div>
 
-      <div id="navbar" class="navbar-menu" v-bind:class="{ active: isActive }">
+      <div id="navMenu" class="navbar-menu" v-bind:class="{ active: isActive }">
         <div
           class="navbar-start has-text-weight-medium"
           style="flex-grow: 1; justify-content: center"
@@ -43,8 +43,12 @@
             >In inglese</a
           >
           <div class="navbar-item has-dropdown is-hoverable">
-            <p class="navbar-link">Città</p>
-            <div class="navbar-dropdown">
+            <p class="navbar-link" v-on:click="linkCitta = !linkCitta">Città</p>
+            <div
+              id="linkCitta"
+              class="navbar-dropdown"
+              v-bind:class="{ 'is-hidden': linkCitta }"
+            >
               <a class="navbar-item" href="/corsi-di-laurea-bologna"
                 >Corsi di laurea Bologna
               </a>
@@ -99,6 +103,12 @@
             Gruppi e Test medicina</a
           >
         </div>
+        <div
+          id="adsbox"
+          style="text-align: center"
+          v-html="adsenseBurger"
+          class="is-hidden-desktop"
+        ></div>
       </div>
     </nav>
   </div>
@@ -109,7 +119,12 @@ export default {
   data() {
     return {
       isActive: false,
+      linkCitta: true,
+      adsenseBurger: "",
     };
+  },
+  async mounted() {
+    this.adsenseBurger = document.getElementById("divadsburger").innerHTML;
   },
 };
 </script>
