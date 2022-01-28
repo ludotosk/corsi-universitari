@@ -53,6 +53,20 @@ function filtro() {
 document.querySelector('#città').addEventListener('click', sortCitta)
 document.querySelector('#università').addEventListener('click', sortUni)
 document.querySelector('#nome').addEventListener('click', sortNome)
+document.querySelector('#citta').addEventListener('click', nascondiCitta)
+
+var mostraCitta = false;
+
+function nascondiCitta() {
+    console.log('ciao')
+    if (mostraCitta) {
+        document.querySelector('#linkCitta').setAttribute('class', 'navbar-dropdown is-hidden')
+        mostraCitta = false;
+    } else {
+        document.querySelector('#linkCitta').setAttribute('class', 'navbar-dropdown')
+        mostraCitta = true;
+    }
+}
 
 function sortCitta() {
     sortColonna(1)
