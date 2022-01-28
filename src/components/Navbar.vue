@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
+      <div class="navbar-brand ">
         <a href="/" class="navbar-item">
           <img
             src="/img/icons/android-chrome-192x192.png"
@@ -104,7 +104,6 @@
           >
         </div>
         <div
-          id="adsbox"
           style="text-align: center"
           v-html="adsenseBurger"
           class="is-hidden-desktop"
