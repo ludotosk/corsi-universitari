@@ -144,12 +144,8 @@ export default {
   },
   methods: {
     pubblicita() {
-      console.log('adv')
       this.adsenseContent = document.getElementById("divadsensedisplaynone").innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
-      if (this.adsenseContent && this.adsenseBox){
-        clearTimeout(this.timeOut)
-      }
     },
   },
 };

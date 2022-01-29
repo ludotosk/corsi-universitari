@@ -127,10 +127,11 @@ export default {
       isActive: false,
       linkCitta: true,
       adsenseBurger: "",
+      timeOut: null
     };
   },
   async mounted() {
-    const timeOut = setTimeout(this.pubblicita, 1500)
+     this.timeOut = setInterval(this.pubblicita, 500)
   },
   methods: {
     pubblicita() {
