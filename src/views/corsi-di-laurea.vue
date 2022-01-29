@@ -126,6 +126,7 @@ export default {
       adsenseContent: "",
       adsenseBox: "",
       adsenseSx: "",
+      timeOut: null
     };
   },
   async mounted() {
@@ -139,10 +140,7 @@ export default {
     } catch (e) {
       console.log(e);
     }
-    const timeOut = setTimeout(this.pubblicita, 1500)
-  },
-  async updated() {
-    this.pubblicita();
+    this.timeOut = setInterval(this.pubblicita, 500);
   },
   methods: {
     pubblicita() {
@@ -151,5 +149,8 @@ export default {
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
   },
+  watch: {
+    adsenseBox: 'clearInterval(timeOut)'
+  }
 };
 </script>
