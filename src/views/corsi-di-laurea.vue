@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div style="text-align: center; height:90px" v-html="adsenseContent"></div>
+    <div style="text-align: center; height: 90px" v-html="adsenseContent"></div>
     <!--    <p>
       <strong>Attenzione!</strong> per eseguire la ricerca serve il nome del
       corso corretto. Es. <strong>biotecnologie</strong> si trova sotto
@@ -139,13 +139,17 @@ export default {
     } catch (e) {
       console.log(e);
     }
-    const timeOut = setTimeout(this.pubblicita, 1500)
+    const observerOptions = {
+      childList: true,
+      attributes: true,
+      subtree: true,
+    };
+    const observer = new MutationObserver(this.pubblicita);
+    observer.observe("#divadsensebox", observerOptions);
   },
   methods: {
     pubblicita() {
-      this.adsenseContent = document.getElementById(
-        "divadsensedisplaynone"
-      ).innerHTML;
+      this.adsenseContent = document.getElementById("divadsensedisplaynone").innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
   },
