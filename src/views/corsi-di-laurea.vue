@@ -140,13 +140,6 @@ export default {
       console.log(e);
     }
     const timeOut = setTimeout(this.pubblicita, 1500)
-    const observerOptions = {
-      childList: true,
-      attributes: true,
-      subtree: true,
-    };
-    const observer = new MutationObserver(this.pubblicita);
-    observer.observe("#divadsensebox", observerOptions);
   },
   methods: {
     pubblicita() {
