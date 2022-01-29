@@ -142,10 +142,11 @@ export default {
     const timeOut = setTimeout(this.pubblicita, 1500)
   },
   async updated() {
-    this.pubblicita;
+    this.pubblicita();
   },
   methods: {
     pubblicita() {
+      console.log('adv')
       this.adsenseContent = document.getElementById("divadsensedisplaynone").innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
