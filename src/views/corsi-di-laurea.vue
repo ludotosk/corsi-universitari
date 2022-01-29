@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div style="text-align: center" v-html="adsenseContent"></div>
+    <div style="text-align: center; height:90px" v-html="adsenseContent"></div>
     <!--    <p>
       <strong>Attenzione!</strong> per eseguire la ricerca serve il nome del
       corso corretto. Es. <strong>biotecnologie</strong> si trova sotto
@@ -108,7 +108,7 @@
       corso sarà segnato come test sì, in caso di accesso libero come test no.
     </p>
     <br />
-    <div style="text-align: center" v-html="adsenseBox"></div>
+    <div style="text-align: center; height: 250px" v-html="adsenseBox"></div>
     <br />
   </div>
 </template>
@@ -139,11 +139,15 @@ export default {
     } catch (e) {
       console.log(e);
     }
-    this.adsenseContent = document.getElementById(
-      "divadsensedisplaynone"
-    ).innerHTML;
-    this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
-    this.adsenseSx = document.getElementById("divadssx").innerHTML;
+    const timeOut = setTimeout(this.pubblicita, 1500)
+  },
+  methods: {
+    pubblicita() {
+      this.adsenseContent = document.getElementById(
+        "divadsensedisplaynone"
+      ).innerHTML;
+      this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
+    },
   },
 };
 </script>

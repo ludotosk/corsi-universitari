@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand ">
+      <div class="navbar-brand">
         <a href="/" class="navbar-item">
           <img
             src="/img/icons/android-chrome-192x192.png"
@@ -43,7 +43,13 @@
             >In inglese</a
           >
           <div class="navbar-item has-dropdown is-hoverable">
-            <p class="navbar-link" v-on:click="linkCitta = !linkCitta">Città</p>
+            <p
+              class="navbar-link"
+              v-on:click="linkCitta = !linkCitta"
+              aria-haspopup="true"
+            >
+              Città
+            </p>
             <div
               id="linkCitta"
               class="navbar-dropdown"
@@ -104,7 +110,7 @@
           >
         </div>
         <div
-          style="text-align: center"
+          style="text-align: center; height: 280px"
           v-html="adsenseBurger"
           class="is-hidden-desktop"
         ></div>
@@ -123,7 +129,12 @@ export default {
     };
   },
   async mounted() {
-    this.adsenseBurger = document.getElementById("divadsburger").innerHTML;
+    const timeOut = setTimeout(this.pubblicita, 1500)
+  },
+  methods: {
+    pubblicita() {
+      this.adsenseBurger = document.getElementById("divadsburger").innerHTML;
+    },
   },
 };
 </script>
