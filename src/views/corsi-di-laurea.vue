@@ -141,6 +141,9 @@ export default {
     }
     const timeOut = setTimeout(this.pubblicita, 1500)
   },
+  async updated() {
+    this.pubblicita;
+  },
   methods: {
     pubblicita() {
       this.adsenseContent = document.getElementById("divadsensedisplaynone").innerHTML;
