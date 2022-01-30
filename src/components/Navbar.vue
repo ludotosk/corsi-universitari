@@ -111,7 +111,7 @@
         </div>
         <br>
         <div
-          style="text-align: center; height: 280px"
+          style="text-align: center;"
           v-html="adsenseBurger"
           class="is-hidden-desktop"
         ></div>
