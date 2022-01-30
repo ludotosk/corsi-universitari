@@ -15,8 +15,11 @@
       laureati da tre anni. I corsi di laurea selezionati riguardano le classi
       di laurea dei corsi magistrali e delle magistrali a ciclo unico. Per
       ulteriori informazioni su metologia e campione dei dati vi invito ad
-      andare sul link in fondo alla tabella. <a href="/migliori-universita-italiane" class="has-text-danger"> Se invece vuoi scoprire quali sono
-      le migliori università italiane clicca qui</a>!
+      andare sul link in fondo alla tabella.
+      <a href="/migliori-universita-italiane" class="has-text-danger">
+        Se invece vuoi scoprire quali sono le migliori università italiane
+        clicca qui</a
+      >!
     </p>
     <br />
     <div class="field is-horizontal">
@@ -40,19 +43,41 @@
       </div>
     </div>
     <br />
+    <div
+      style="
+        text-align: center;
+        height: 90px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        max-width: 728px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      "
+      v-html="adsenseContent"
+    ></div>
     <VTable
       :data="corsi"
       :filters="filters"
       class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
     >
       <template #head class="has-background-dark">
-        <VTh sortKey="Classe" defaultSort="asc" class="has-text-white  has-background-dark"
-          >Classe di laurea</Vth
+        <VTh
+          sortKey="Classe"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
+          >Classe di laurea</VTh
         >
-        <VTh sortKey="Occupazione" defaultSort="asc" class="has-text-white  has-background-dark"
+        <VTh
+          sortKey="Occupazione"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
           >Occupazione %</VTh
         >
-        <VTh sortKey="Stipendio" defaultSort="asc" class="has-text-white  has-background-dark"
+        <VTh
+          sortKey="Stipendio"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
           >Stipendio medio netto €</VTh
         >
       </template>
@@ -76,6 +101,18 @@
       >
     </p>
     <br />
+    <div
+      style="
+        text-align: center;
+        height: 250px;
+        overflow: hidden;
+        max-width: 970px;
+        width: auto;
+        margin: auto;
+      "
+      v-html="adsenseBox"
+    ></div>
+    <br />
   </div>
 </template>
 
@@ -90,7 +127,21 @@ export default {
       filters: {
         n: { value: "", keys: ["Classe"] },
       },
+      adsenseContent: "",
+      adsenseBox: "",
+      timeOut: null,
     };
+  },
+  mounted() {
+    this.timeOut = setInterval(this.pubblicita, 500);
+  },
+  methods: {
+    pubblicita() {
+      this.adsenseContent = document.getElementById(
+        "divadsensedisplaynone"
+      ).innerHTML;
+      this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
+    },
   },
 };
 </script>

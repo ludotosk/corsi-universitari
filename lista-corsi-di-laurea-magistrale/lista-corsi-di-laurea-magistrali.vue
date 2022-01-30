@@ -2,7 +2,7 @@
   <div class="container is-fullhd">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
-       Corsi di laurea magistrali [lista 2021/2022]
+      Corsi di laurea magistrali [lista 2021/2022]
     </h1>
     <h2 class="has-text-centered is-size-3 has-text-dark has-text-left">
       Quali sono i corsi di laurea magistrali? Ecco la lista!
@@ -43,6 +43,19 @@
       tabella.
     </p> -->
     <br />
+    <div
+      style="
+        text-align: center;
+        height: 90px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        max-width: 728px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      "
+      v-html="adsenseContent"
+    ></div>
     <div v-if="cerca == true">
       <br />
       <VTable
@@ -110,13 +123,7 @@
       <tbody v-for="corso in corsi" :key="corso.n">
         <tr data-view>
           <td>
-            <a
-              :href="corso.h"
-              target="_blank"
-              rel="noopener"
-         
-              >{{ corso.n }}</a
-            >
+            <a :href="corso.h" target="_blank" rel="noopener">{{ corso.n }}</a>
           </td>
           <!--           <td>{{ corso.s }}</td>
           <td>{{ corso.a }}</td> -->
@@ -140,6 +147,17 @@
       </p>
     </div>
     <br />
+    <div
+      style="
+        text-align: center;
+        height: 250px;
+        overflow: hidden;
+        max-width: 970px;
+        width: auto;
+        margin: auto;
+      "
+      v-html="adsenseBox"
+    ></div>
     <br />
   </div>
 </template>
@@ -155,6 +173,9 @@ export default {
       totalPages: 0,
       corsi: [],
       cerca: false,
+      adsenseContent: "",
+      adsenseBox: "",
+      timeOut: null,
     };
   },
   async mounted() {
@@ -168,10 +189,19 @@ export default {
     } catch (e) {
       console.log(e);
     }
+    this.timeOut = setInterval(this.pubblicita, 500);
   },
   watch: {
     "filters.n.value": function () {
       this.cerca = true;
+    },
+  },
+  methods: {
+    pubblicita() {
+      this.adsenseContent = document.getElementById(
+        "divadsensedisplaynone"
+      ).innerHTML;
+      this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
   },
 };

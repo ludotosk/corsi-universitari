@@ -1,5 +1,18 @@
 <template>
   <div class="container is-fullhd">
+    <div
+      style="
+        text-align: center;
+        height: 90px;
+        margin-top: 10px;
+        overflow: hidden;
+        max-width: 728px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      "
+      v-html="adsenseContent"
+    ></div>
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
       Migliori università Italiane 2021
@@ -151,13 +164,22 @@
       class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
     >
       <template #head class="has-background-dark">
-        <VTh sortKey="ateneo" defaultSort="asc" class="has-text-white has-background-dark"
+        <VTh
+          sortKey="ateneo"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
           >Ateneo</VTh
         >
-        <VTh sortKey="dimensione" defaultSort="asc" class="has-text-white has-background-dark"
+        <VTh
+          sortKey="dimensione"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
           >Dimensioni</VTh
         >
-        <VTh sortKey="tipologia" defaultSort="asc" class="has-text-white has-background-dark"
+        <VTh
+          sortKey="tipologia"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
           >Tipologia</VTh
         >
         <VTh
@@ -202,7 +224,10 @@
           v-if="strutture"
           >Strutture</VTh
         >
-        <VTh sortKey="punteggio" defaultSort="asc" class="has-text-white has-background-dark"
+        <VTh
+          sortKey="punteggio"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
           >Punteggio</VTh
         >
       </template>
@@ -292,6 +317,18 @@
       </tbody>
     </table>
     <br />
+    <div
+      style="
+        text-align: center;
+        height: 250px;
+        overflow: hidden;
+        max-width: 970px;
+        width: auto;
+        margin: auto;
+      "
+      v-html="adsenseBox"
+    ></div>
+    <br />
   </div>
 </template>
 
@@ -334,7 +371,21 @@ export default {
       filters: {
         n: { value: "", keys: ["ateneo"] },
       },
+      adsenseContent: "",
+      adsenseBox: "",
+      timeOut: null,
     };
+  },
+  mounted() {
+    this.timeOut = setInterval(this.pubblicita, 500);
+  },
+  methods: {
+    pubblicita() {
+      this.adsenseContent = document.getElementById(
+        "divadsensedisplaynone"
+      ).innerHTML;
+      this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
+    },
   },
 };
 </script>

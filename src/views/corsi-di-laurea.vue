@@ -125,7 +125,6 @@ export default {
       totalPages: 0,
       adsenseContent: "",
       adsenseBox: "",
-      adsenseSx: "",
       timeOut: null
     };
   },

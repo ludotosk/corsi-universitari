@@ -2,7 +2,7 @@
   <div class="container is-fullhd">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
-      Università {{ uni }}, Corsi di Laurea [2021/2022] 🇬🇧 
+      Università {{ uni }}, Corsi di Laurea [2021/2022] 🇬🇧
     </h1>
     <h2 class="has-text-centered is-size-3 has-text-dark has-text-left">
       Quali sono i Corsi di Laurea {{ uni }} in Italia? Ecco la lista!
@@ -43,6 +43,19 @@
       tabella.
     </p> -->
     <br />
+    <div
+      style="
+        text-align: center;
+        height: 90px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        max-width: 728px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      "
+      v-html="adsenseContent"
+    ></div>
     <div v-if="cambiaTabella">
       <VTable
         :data="corsi"
@@ -139,14 +152,18 @@
       </p>
     </div>
     <br />
-    <iframe
-      src="https://www.corsiuniversitari.info/api/corsi?e=1"
-      frameborder="0"
-      id="dati"
-      v-on:click="prova"
-      onload='(function(){document.getElementById("dati").click();})()'
-      style="display: none"
-    ></iframe>
+    <div
+      style="
+        text-align: center;
+        height: 250px;
+        overflow: hidden;
+        max-width: 970px;
+        width: auto;
+        margin: auto;
+      "
+      v-html="adsenseBox"
+    ></div>
+    <br />
   </div>
 </template>
 
@@ -163,6 +180,9 @@ export default {
       corsi: [],
       cerca: false,
       cambiaTabella: false,
+      adsenseContent: "",
+      adsenseBox: "",
+      timeOut: null,
     };
   },
   async mounted() {
@@ -176,10 +196,19 @@ export default {
     } catch (e) {
       console.log(e);
     }
+    this.timeOut = setInterval(this.pubblicita, 500);
   },
   watch: {
     "filters.n.value": function () {
       this.cambiaTabella = true;
+    },
+  },
+  methods: {
+    pubblicita() {
+      this.adsenseContent = document.getElementById(
+        "divadsensedisplaynone"
+      ).innerHTML;
+      this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
   },
 };

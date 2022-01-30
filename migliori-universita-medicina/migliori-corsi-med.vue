@@ -1,5 +1,18 @@
 <template>
   <div class="container is-fullhd">
+    <div
+      style="
+        text-align: center;
+        height: 90px;
+        margin-top: 10px;
+        overflow: hidden;
+        max-width: 728px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      "
+      v-html="adsenseContent"
+    ></div>
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
       Migliori università di medicina [2020]
@@ -76,19 +89,37 @@
       class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
     >
       <template #head class="has-background-dark">
-        <VTh sortKey="uni" defaultSort="asc" class="has-text-white has-background-dark"
+        <VTh
+          sortKey="uni"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
           >Università</VTh
         >
-        <VTh sortKey="media" defaultSort="asc" class="has-text-white has-background-dark"
+        <VTh
+          sortKey="media"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
           >Media 3 anni</VTh
         >
-        <VTh sortKey="venti" defaultSort="asc" class="has-text-white has-background-dark" v-if="venti"
+        <VTh
+          sortKey="venti"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
+          v-if="venti"
           >2020</VTh
         >
-        <VTh sortKey="diciannove" defaultSort="asc" class="has-text-white has-background-dark" v-if="diciannove"
+        <VTh
+          sortKey="diciannove"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
+          v-if="diciannove"
           >2019</VTh
         >
-        <VTh sortKey="diciotto" defaultSort="asc" class="has-text-white has-background-dark" v-if="diciotto"
+        <VTh
+          sortKey="diciotto"
+          defaultSort="asc"
+          class="has-text-white has-background-dark"
+          v-if="diciotto"
           >2018</VTh
         >
       </template>
@@ -99,8 +130,12 @@
           </td>
           <td class="has-text-weight-medium">{{ row.media }}</td>
           <td class="has-text-weight-medium" v-if="venti">{{ row.venti }}</td>
-          <td class="has-text-weight-medium" v-if="diciannove">{{ row.diciannove }}</td>
-          <td class="has-text-weight-medium" v-if="diciotto">{{ row.diciotto }}</td>
+          <td class="has-text-weight-medium" v-if="diciannove">
+            {{ row.diciannove }}
+          </td>
+          <td class="has-text-weight-medium" v-if="diciotto">
+            {{ row.diciotto }}
+          </td>
         </tr>
       </template>
     </VTable>
@@ -113,6 +148,18 @@
         >Fonte: Associazione Liberi Specializzandi</a
       >
     </p>
+    <br />
+    <div
+      style="
+        text-align: center;
+        height: 250px;
+        overflow: hidden;
+        max-width: 970px;
+        width: auto;
+        margin: auto;
+      "
+      v-html="adsenseBox"
+    ></div>
     <br />
   </div>
 </template>
@@ -131,7 +178,21 @@ export default {
       filters: {
         n: { value: "", keys: ["uni"] },
       },
+      adsenseContent: "",
+      adsenseBox: "",
+      timeOut: null,
     };
+  },
+  mounted() {
+    this.timeOut = setInterval(this.pubblicita, 500);
+  },
+  methods: {
+    pubblicita() {
+      this.adsenseContent = document.getElementById(
+        "divadsensedisplaynone"
+      ).innerHTML;
+      this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
+    },
   },
 };
 </script>

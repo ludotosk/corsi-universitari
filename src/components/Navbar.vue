@@ -91,10 +91,7 @@
           <a href="/lista-corsi-di-laurea-senza-test" class="navbar-item"
             >Corsi senza test</a
           >
-          <a
-            href="/migliori-corsi-di-laurea"
-            target="_blank"
-            class="navbar-item"
+          <a href="/migliori-corsi-di-laurea" class="navbar-item"
             >Migliori lauree</a
           >
         </div>
@@ -109,9 +106,9 @@
             Gruppi e Test medicina</a
           >
         </div>
-        <br>
+        <br />
         <div
-          style="text-align: center;"
+          style="text-align: center"
           v-html="adsenseBurger"
           class="is-hidden-desktop"
         ></div>
@@ -127,11 +124,11 @@ export default {
       isActive: false,
       linkCitta: true,
       adsenseBurger: "",
-      timeOut: null
+      timeOut: null,
     };
   },
   async mounted() {
-     this.timeOut = setInterval(this.pubblicita, 500)
+    this.timeOut = setInterval(this.pubblicita, 500);
   },
   methods: {
     pubblicita() {

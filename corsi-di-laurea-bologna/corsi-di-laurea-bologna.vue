@@ -44,6 +44,19 @@
       tabella.
     </p> -->
     <br />
+    <div
+      style="
+        text-align: center;
+        height: 90px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        max-width: 728px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      "
+      v-html="adsenseContent"
+    ></div>
     <div v-if="cambiaTabella">
       <VTable
         :data="corsi"
@@ -132,6 +145,18 @@
       </tbody>
     </table>
     <br />
+    <div
+      style="
+        text-align: center;
+        height: 250px;
+        overflow: hidden;
+        max-width: 970px;
+        width: auto;
+        margin: auto;
+      "
+      v-html="adsenseBox"
+    ></div>
+    <br />
   </div>
 </template>
 
@@ -147,6 +172,9 @@ export default {
       uni: "Bologna",
       corsi: [],
       cambiaTabella: false,
+      adsenseContent: "",
+      adsenseBox: "",
+      timeOut: null,
     };
   },
   async mounted() {
@@ -160,10 +188,19 @@ export default {
     } catch (e) {
       console.log(e);
     }
+    this.timeOut = setInterval(this.pubblicita, 500);
   },
   watch: {
     "filters.n.value": function () {
       this.cambiaTabella = true;
+    },
+  },
+  methods: {
+    pubblicita() {
+      this.adsenseContent = document.getElementById(
+        "divadsensedisplaynone"
+      ).innerHTML;
+      this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
   },
 };
