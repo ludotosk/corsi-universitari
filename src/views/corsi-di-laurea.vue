@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div style="text-align: center; height: 90px; margin-bottom: 10px" v-html="adsenseContent"></div>
+    <div style="text-align: center; height: 90px; margin-bottom: 10px; overflow: hidden; max-width: 728px; width: auto; margin-left: auto; margin-right: auto;" v-html="adsenseContent"></div>
     <!--    <p>
       <strong>Attenzione!</strong> per eseguire la ricerca serve il nome del
       corso corretto. Es. <strong>biotecnologie</strong> si trova sotto
@@ -108,7 +108,7 @@
       corso sarà segnato come test sì, in caso di accesso libero come test no.
     </p>
     <br />
-    <div style="text-align: center; height: 250px;" v-html="adsenseBox"></div>
+    <div style="text-align: center; height: 250px; overflow: hidden; max-width: 970px; width: auto; margin: auto;" v-html="adsenseBox"></div>
     <br />
   </div>
 </template>
