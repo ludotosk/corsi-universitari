@@ -8,8 +8,6 @@
         overflow: hidden;
         max-width: 728px;
         width: auto;
-        margin-left: auto;
-        margin-right: auto;
       "
       v-html="adsenseContent"
     ></div>

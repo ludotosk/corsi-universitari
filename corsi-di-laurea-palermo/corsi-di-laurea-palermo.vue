@@ -43,7 +43,6 @@
       comune a tutti i nomi. Il resto della <strong>guida</strong> è sotto la
       tabella.
     </p> -->
-    <br />
     <div
       style="
         text-align: center;

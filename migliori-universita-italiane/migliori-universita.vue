@@ -8,12 +8,9 @@
         overflow: hidden;
         max-width: 728px;
         width: auto;
-        margin-left: auto;
-        margin-right: auto;
       "
       v-html="adsenseContent"
     ></div>
-    <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
       Migliori università Italiane 2021
     </h1>
