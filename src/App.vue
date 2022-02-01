@@ -29,8 +29,7 @@ export default {
   data() {
     return {
       timeOut: null,
-      adpc300: "",
-      adpc160: "",
+      adsenseBurger: "",
     };
   },
 };
