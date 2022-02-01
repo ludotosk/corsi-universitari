@@ -23,17 +23,16 @@ export default {
   },
   methods: {
     pubblicita() {
-      this.adpc300 = document.getElementById("adpc300").innerHTML;
-      this.adpc160 = document.getElementById("adpc160").innerHTML;
+      this.adsenseBurger = document.getElementById("divadsburger").innerHTML;
     },
   },
-  data(){
+  data() {
     return {
       timeOut: null,
       adpc300: "",
-      adpc160: ""
-    }
-  }
+      adpc160: "",
+    };
+  },
 };
 </script>
 
@@ -44,46 +43,44 @@ export default {
       <Corsi />
       <Panel />
     </div>
-    <div class="ad300" v-html="adpc300"></div>
-   <div class="ad160" v-html="adpc160"></div> 
+    <div class="ad300" v-html="adsenseBurger"></div>
   </div>
   <Footer />
 </template>
 
 <style>
-.ad300{
-  display: initial;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-top: 40px;
-  height: 1050px;
-}
-
-.ad160 {
+.ad300 {
   display: none;
 }
 
-@media (max-width: 1919px) {
-  .ad300{
-    display: none;
+@media (min-width: 1919px) {
+  .ad300 {
+    background-color: khaki;
+    display: initial;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 40px;
+    height: 1050px;
+    width: 300px;
   }
 }
 
 @media (min-width: 1536px) and (max-width: 1918px) {
-.ad160 {
-  display: initial;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15%;
-  text-align: center;
-  height: 600px;
-}
+  .ad300 {
+    background-color: khaki;
+    display: initial;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    text-align: center;
+    height: 600px;
+    width: 160px;
+  }
 }
 
 .tabella {
   margin-right: auto;
   margin-left: auto;
 }
-
 </style>
