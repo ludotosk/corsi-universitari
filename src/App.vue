@@ -64,7 +64,7 @@ export default {
   }
 }
 
-@media (min-width: 1536px) and (max-width: 1918px) {
+/* @media (min-width: 1536px) and (max-width: 1918px) {
   .ad300 {
     display: initial;
     margin-left: auto;
@@ -75,7 +75,7 @@ export default {
     width: 160px;
   }
 }
-
+ */
 .tabella {
   margin-right: auto;
   margin-left: auto;
