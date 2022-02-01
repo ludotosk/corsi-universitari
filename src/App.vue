@@ -55,7 +55,6 @@ export default {
 
 @media (min-width: 1919px) {
   .ad300 {
-    background-color: khaki;
     display: initial;
     margin-left: auto;
     margin-right: auto;
@@ -68,7 +67,6 @@ export default {
 
 @media (min-width: 1536px) and (max-width: 1918px) {
   .ad300 {
-    background-color: khaki;
     display: initial;
     margin-left: auto;
     margin-right: auto;
