@@ -1,8 +1,8 @@
 <script>
 import Nav from "../src/components/Navbar.vue";
 import Panel from "../src/components/Panellink.vue";
-import Footer from "../src/components/Footer.vue";
-import Corsi from "./views/corsi-di-laurea.vue";
+import Footer from "../src/components/Footer.vue"
+import Corsi from "./corsi-di-laurea-genova.vue"
 
 export default {
   async beforeUpdate() {
@@ -16,7 +16,7 @@ export default {
     Nav,
     Panel,
     Footer,
-    Corsi,
+    Corsi
   },
 };
 </script>

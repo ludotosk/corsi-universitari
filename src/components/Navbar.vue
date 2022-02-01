@@ -85,6 +85,9 @@
               <a class="navbar-item" href="/corsi-di-laurea-palermo"
                 >Corsi di laurea Palermo
               </a>
+              <a class="navbar-item" href="/corsi-di-laurea-genova"
+                >Corsi di laurea Genova
+              </a>
             </div>
           </div>
           <a href="/lauree-triennali-elenco" class="navbar-item">Triennali</a>

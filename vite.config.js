@@ -31,7 +31,8 @@ export default defineConfig({
                 med: resolve(__dirname, 'migliori-universita-medicina/index.html'),
                 cont: resolve(__dirname, 'contattami/index.html'),
                 pol: resolve(__dirname, 'cookie-policy/index.html'),
-                tabella: resolve(__dirname, 'tabella/index.html')
+                tabella: resolve(__dirname, 'tabella/index.html'),
+                genova: resolve(__dirname, 'corsi-di-laurea-genova/index.html'),
             }
         }
     }
