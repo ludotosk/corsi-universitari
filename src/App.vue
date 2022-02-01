@@ -12,16 +12,16 @@ export default {
       //nulla
     }
   },
-  async mounted() {
+  /*   async mounted() {
     this.timeOut = setInterval(this.pubblicita, 500);
-  },
+  }, */
   components: {
     Nav,
     Panel,
     Footer,
     Corsi,
   },
-  methods: {
+  /*   methods: {
     pubblicita() {
       this.ad300 = document.getElementById("ad300").innerHTML;
     },
@@ -31,24 +31,24 @@ export default {
       timeOut: null,
       ad300: "",
     };
-  },
+  }, */
 };
 </script>
 
 <template>
   <Nav />
-  <div class="is-flex is-flex-direction-row">
-    <div class="tabella">
-      <Corsi />
-      <Panel />
-    </div>
+  <!--   <div class="is-flex is-flex-direction-row">
+    <div class="tabella"> -->
+  <Corsi />
+  <Panel />
+  <!--   </div>
     <div class="ad300" v-html="ad300"></div>
-  </div>
+  </div> -->
   <Footer />
 </template>
 
 <style>
-.ad300 {
+/* .ad300 {
   display: none;
 }
 
@@ -64,7 +64,7 @@ export default {
   }
 }
 
-/* @media (min-width: 1536px) and (max-width: 1918px) {
+@media (min-width: 1536px) and (max-width: 1918px) {
   .ad300 {
     display: initial;
     margin-left: auto;
@@ -75,9 +75,9 @@ export default {
     width: 160px;
   }
 }
- */
+
 .tabella {
   margin-right: auto;
   margin-left: auto;
-}
-</style>
+} */
+</style> 
