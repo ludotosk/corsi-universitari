@@ -23,13 +23,13 @@ export default {
   },
   methods: {
     pubblicita() {
-      this.adsenseBurger = document.getElementById("divadsburger").innerHTML;
+      this.ad300 = document.getElementById("ad300").innerHTML;
     },
   },
   data() {
     return {
       timeOut: null,
-      adsenseBurger: "",
+      ad300: "",
     };
   },
 };
@@ -42,7 +42,7 @@ export default {
       <Corsi />
       <Panel />
     </div>
-    <div class="ad300" v-html="adsenseBurger"></div>
+    <div class="ad300" v-html="ad300"></div>
   </div>
   <Footer />
 </template>
