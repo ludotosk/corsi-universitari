@@ -12,18 +12,78 @@ export default {
       //nulla
     }
   },
+  async mounted() {
+    this.timeOut = setInterval(this.pubblicita, 500);
+  },
   components: {
     Nav,
     Panel,
     Footer,
     Corsi,
   },
+  methods: {
+    pubblicita() {
+      this.adpc300 = document.getElementById("adpc300").innerHTML;
+      this.adpc160 = document.getElementById("adpc160").innerHTML;
+    },
+  },
+  data(){
+    return {
+      timeOut: null,
+      adpc300: "",
+      adpc160: ""
+    }
+  }
 };
 </script>
 
 <template>
   <Nav />
-  <Corsi style="min-height: 100vh" />
-  <Panel />
+  <div class="is-flex is-flex-direction-row">
+    <div class="tabella">
+      <Corsi />
+      <Panel />
+    </div>
+    <div class="ad300" v-html="adpc300"></div>
+   <div class="ad160" v-html="adpc160"></div> 
+  </div>
   <Footer />
 </template>
+
+<style>
+.ad300{
+  display: initial;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 40px;
+  height: 1050px;
+}
+
+.ad160 {
+  display: none;
+}
+
+@media (max-width: 1919px) {
+  .ad300{
+    display: none;
+  }
+}
+
+@media (min-width: 1536px) and (max-width: 1918px) {
+.ad160 {
+  display: initial;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15%;
+  text-align: center;
+  height: 600px;
+}
+}
+
+.tabella {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+</style>
