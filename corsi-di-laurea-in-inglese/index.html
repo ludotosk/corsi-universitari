@@ -41,15 +41,17 @@
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-WSK0D83FEJ&amp;l=dataLayer"></script>
     <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9272099472729034" crossorigin="anonymous"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+        window.onload = function() {
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            window.dataLayer.push(arguments);
+            function gtag() {
+                window.dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-WSK0D83FEJ');
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
         }
-        gtag('js', new Date());
-        gtag('config', 'G-WSK0D83FEJ');
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </body>
 
