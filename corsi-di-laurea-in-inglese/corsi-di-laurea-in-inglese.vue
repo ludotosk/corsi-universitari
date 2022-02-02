@@ -1,5 +1,6 @@
 <template>
-  <div class="container is-fullhd">
+  <Nav />
+  <div class="container is-fullhd" style="min-height: 100vh">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
       Università {{ uni }}, Corsi di Laurea [2021/2022] 🇬🇧
@@ -162,11 +163,17 @@
       "
       v-html="adsenseBox"
     ></div>
-    <br />
+   <br />
   </div>
+  <Panel />
+  <Footer />
 </template>
 
 <script>
+import Nav from "../src/components/Navbar.vue";
+import Panel from "../src/components/Panellink.vue";
+import Footer from "../src/components/Footer.vue";
+
 export default {
   data() {
     return {
@@ -209,6 +216,18 @@ export default {
       ).innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
+  },
+  async beforeUpdate() {
+    try {
+      document.getElementById("navbar").setAttribute("class", `navbar-menu`);
+    } catch (e) {
+      //nulla
+    }
+  },
+  components: {
+    Nav,
+    Panel,
+    Footer,
   },
 };
 </script>

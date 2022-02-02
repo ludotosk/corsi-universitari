@@ -1,5 +1,6 @@
 <template>
-  <div class="container is-fullhd">
+  <Nav />
+  <div class="container is-fullhd" style="min-height: 100vh" >
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
       Migliori lauree per trovare lavoro [2020]
@@ -113,11 +114,16 @@
     ></div>
     <br />
   </div>
+  <Panel />
+  <Footer />
 </template>
 
 
 <script>
 import corsi from "../src/assets/migliori-corsi.json";
+import Nav from "../src/components/Navbar.vue";
+import Panel from "../src/components/Panellink.vue";
+import Footer from "../src/components/Footer.vue"
 
 export default {
   data() {
@@ -141,6 +147,18 @@ export default {
       ).innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
+  },
+    async beforeUpdate() {
+    try {
+      document.getElementById("navbar").setAttribute("class", `navbar-menu`);
+    } catch (e) {
+      //nulla
+    }
+  },
+  components: {
+    Nav,
+    Panel,
+    Footer
   },
 };
 </script>

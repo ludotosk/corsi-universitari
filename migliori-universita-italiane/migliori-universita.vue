@@ -1,5 +1,6 @@
 <template>
-  <div class="container is-fullhd">
+  <Nav />
+  <div class="container is-fullhd" style="min-height: 100vh">
     <div
       style="
         text-align: center;
@@ -327,35 +328,17 @@
     ></div>
     <br />
   </div>
+    <Panel />
+  <Footer />
 </template>
 
 <script>
 import corsi from "../src/assets/migliori-uni.json";
+import Nav from "../src/components/Navbar.vue";
+import Panel from "../src/components/Panellink.vue";
+import Footer from "../src/components/Footer.vue";
 
 export default {
-  metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
-    title: "Migliori università italiane 2021/2022",
-    // all titles will be injected into this template
-    titleTemplate: "%s | Classifica Censis",
-    meta: [
-      {
-        name: "description",
-        content:
-          "Quali sono le migliori università 2021/2022? Abbiamo creato una tabella consultabile con tutti i punteggi Censis di tutte le università italiane!",
-      },
-      {
-        name: "keywords",
-        content: "migliori università, classifica censis",
-      },
-    ],
-    link: [
-      {
-        rel: "canonical",
-        href: "https://www.corsiuniversitari.info/migliori-universita-italiane",
-      },
-    ],
-  },
   data() {
     return {
       borse: false,
@@ -383,6 +366,18 @@ export default {
       ).innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
+  },
+  async beforeUpdate() {
+    try {
+      document.getElementById("navbar").setAttribute("class", `navbar-menu`);
+    } catch (e) {
+      //nulla
+    }
+  },
+  components: {
+    Nav,
+    Panel,
+    Footer,
   },
 };
 </script>
