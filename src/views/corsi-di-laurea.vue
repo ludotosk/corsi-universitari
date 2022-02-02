@@ -30,7 +30,19 @@
         </div>
       </div>
     </div>
-    <div style="text-align: center; height: 90px; margin-bottom: 10px; overflow: hidden; max-width: 728px; width: auto; margin-left: auto; margin-right: auto;" v-html="adsenseContent"></div>
+    <div
+      style="
+        text-align: center;
+        height: 90px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        max-width: 728px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      "
+      v-html="adsenseContent"
+    ></div>
     <!--    <p>
       <strong>Attenzione!</strong> per eseguire la ricerca serve il nome del
       corso corretto. Es. <strong>biotecnologie</strong> si trova sotto
@@ -108,7 +120,17 @@
       corso sarà segnato come test sì, in caso di accesso libero come test no.
     </p>
     <br />
-    <div style="text-align: center; height: 250px; overflow: hidden; max-width: 970px; width: auto; margin: auto;" v-html="adsenseBox"></div>
+    <div
+      style="
+        text-align: center;
+        height: 250px;
+        overflow: hidden;
+        max-width: 970px;
+        width: auto;
+        margin: auto;
+      "
+      v-html="adsenseBox"
+    ></div>
     <br />
   </div>
 </template>
@@ -125,7 +147,8 @@ export default {
       totalPages: 0,
       adsenseContent: "",
       adsenseBox: "",
-      timeOut: null
+      timeOut: null,
+      adsbygoogle: null
     };
   },
   async mounted() {
@@ -139,11 +162,22 @@ export default {
     } catch (e) {
       console.log(e);
     }
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-WSK0D83FEJ");
+    (this.adsbygoogle = window.adsbygoogle || []).push({});
+    (this.adsbygoogle = window.adsbygoogle || []).push({});
     this.timeOut = setInterval(this.pubblicita, 500);
   },
   methods: {
     pubblicita() {
-      this.adsenseContent = document.getElementById("divadsensedisplaynone").innerHTML;
+      this.adsenseContent = document.getElementById(
+        "divadsensedisplaynone"
+      ).innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
   },
