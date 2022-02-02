@@ -23,7 +23,7 @@ export default {
 
 <template>
   <Nav />
-  <Corsi />
+  <Corsi style="min-height: 100vh"/>
   <Panel />
   <Footer />
 </template>
