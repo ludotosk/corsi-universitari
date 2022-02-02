@@ -9,14 +9,22 @@
     <title>Contattami</title>
     <meta name="robot" content="noindex">
     <link href="https://www.googletagmanager.com" rel="preconnect">
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WSK0D83FEJ&amp;l=dataLayer"></script>
+    <script type="module">
+        import { createApp } from 'vue'; import App from './contattami.vue'; import SmartTable from 'vuejs-smart-table'; import '../src/assets/style.scss'; createApp(App).use(SmartTable).mount('#app');
+    </script>
 </head>
 
 <body>
     <div id="app"></div>
-    <script type="module">
-        import { createApp } from 'vue'; import App from './App.vue'; import SmartTable from 'vuejs-smart-table'; import '../src/assets/style.scss'; createApp(App).use(SmartTable).mount('#app'); window.dataLayer = window.dataLayer || []; function gtag() { window.dataLayer.push(arguments);
-        } gtag('js', new Date()); gtag('config', 'G-WSK0D83FEJ');
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-WSK0D83FEJ&amp;l=dataLayer"></script>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            window.dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-WSK0D83FEJ');
     </script>
 </body>
 

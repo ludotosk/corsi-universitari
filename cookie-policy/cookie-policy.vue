@@ -1,5 +1,6 @@
 <template>
-  <div class="container is-fullhd" data-view>
+  <Nav />
+  <div class="container is-fullhd" style="min-height: 100vh" >
     <br />
     <h1 class="is-size-1">Informativa sui cookie</h1>
     <h2 class="is-size-3">Cosa sono i cookie?</h2>
@@ -202,34 +203,24 @@
     </p>
     <br />
   </div>
+    <Footer />
 </template>
 
 <script>
+import Nav from "../src/components/Navbar.vue";
+import Footer from "../src/components/Footer.vue";
+
 export default {
-  metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
-    title: "cookie policy",
-    // all titles will be injected into this template
-    titleTemplate: "%s | corsiuniversitari.info",
-    meta: [
-      {
-        name: "description",
-        content:
-          "Questa è la pagina dedicata all'informativa sulle policy per i cookie.",
-      },
-      {
-        name: "keywords",
-        content:
-          "Corsi di laurea, Corso di laurea, Corsi universitari, Orientamento universitario",
-      },
-      { name: "robots", content: "noindex" },
-    ],
-    link: [
-      {
-        rel: "canonical",
-        href: "https://www.corsiuniversitari.info/cookie-policy",
-      },
-    ],
+  async beforeUpdate() {
+    try {
+      document.getElementById("navbar").setAttribute("class", `navbar-menu`);
+    } catch (e) {
+      //nulla
+    }
+  },
+  components: {
+    Nav,
+    Footer
   },
 };
 </script>

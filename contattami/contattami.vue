@@ -1,5 +1,6 @@
 <template>
-  <div class="container is-fullhd" data-view>
+<Nav />
+  <div class="container is-fullhd" style="min-height: 100vh">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
       Inviaci qui il tuo feedback
@@ -48,34 +49,24 @@
       nuovo messaggio.
     </p>
   </div>
+    <Footer />
 </template>
 
 <script>
+import Nav from "../src/components/Navbar.vue";
+import Footer from "../src/components/Footer.vue";
+
 export default {
-  metaInfo: {
-    // if no subcomponents specify a metaInfo.title, this title will be used
-    title: "contattami",
-    // all titles will be injected into this template
-    titleTemplate: "%s | corsiuniversitari.info",
-    meta: [
-      {
-        name: "description",
-        content:
-          "Pagina dei feedback, se hai qualcosa da scrivermi puoi contattarmi qui. Mi verrà mandata automaticamente un'email col testo del messaggio.",
-      },
-      {
-        name: "keywords",
-        content:
-          "Corsi di laurea, Corso di laurea, Corsi universitari, Orientamento universitario",
-      },
-      { name: "robots", content: "noindex" },
-    ],
-    link: [
-      {
-        rel: "canonical",
-        href: "https://www.corsiuniversitari.info/contattami",
-      },
-    ],
+  async beforeUpdate() {
+    try {
+      document.getElementById("navbar").setAttribute("class", `navbar-menu`);
+    } catch (e) {
+      //nulla
+    }
   },
-};
+  components: {
+    Nav,
+    Footer
+  },
+}
 </script>
