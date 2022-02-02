@@ -106,7 +106,7 @@
               height="40"
               width="40"
             />
-            Gruppi e Test medicina</a
+            Gruppi, Test med e tolc</a
           >
         </div>
       </div>
