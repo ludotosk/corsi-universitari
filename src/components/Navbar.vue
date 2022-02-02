@@ -109,12 +109,6 @@
             Gruppi e Test medicina</a
           >
         </div>
-        <br />
-        <div
-          style="text-align: center"
-          v-html="adsenseBurger"
-          class="is-hidden-desktop"
-        ></div>
       </div>
     </nav>
   </div>
@@ -129,14 +123,6 @@ export default {
       adsenseBurger: "",
       timeOut: null,
     };
-  },
-  async mounted() {
-    this.timeOut = setInterval(this.pubblicita, 500);
-  },
-  methods: {
-    pubblicita() {
-      this.adsenseBurger = document.getElementById("divadsburger").innerHTML;
-    },
   },
 };
 </script>
