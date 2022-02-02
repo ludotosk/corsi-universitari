@@ -4,7 +4,7 @@
       <div class="navbar-brand">
         <a href="/" class="navbar-item">
           <img
-            src="/img/icons/android-chrome-192x192.png"
+            src="../assets/favicon-32x32.png"
             height="32"
             width="32"
             alt="logo corsiuniversitati.info"
