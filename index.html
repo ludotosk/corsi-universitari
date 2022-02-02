@@ -10,7 +10,9 @@
     <meta name="description" content="corsiuniversitari.info ti permette di cercare fra tutti i corsi di laurea del 2021/2022 in base al nome del corso e di trovare quello che fa per te.">
     <meta name="keywords" content="Corsi di laurea, Corso di laurea, Corsi universitari, tutti i corsi di laurea, 2021/2022">
     <link rel="canonical" href="https://www.corsiuniversitari.info/">
-    <script type="module" src="/src/main.js"></script>
+    <script type="module"> import { createApp } from 'vue'; import App from './src/views/corsi-di-laurea.vue'; import SmartTable from 'vuejs-smart-table'; createApp(App).use(SmartTable).mount('#app')
+
+    </script>
     <link rel="preload" href="https://json-corsi-fastify.herokuapp.com/corsi" as="fetch" crossorigin="anonymous">
     <link href="https://www.googletagmanager.com" rel="preconnect">
     <link href="https://googleads.g.doubleclick.net" rel="preconnect">

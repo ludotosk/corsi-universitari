@@ -1,5 +1,6 @@
 <template>
-  <div class="container is-fullhd">
+  <Nav />
+  <div class="container is-fullhd" style="min-height: 100vh">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
       Tutti i Corsi di Laurea esistenti [2021/2022]
@@ -30,7 +31,19 @@
         </div>
       </div>
     </div>
-    <div style="text-align: center; height: 90px; margin-bottom: 10px; overflow: hidden; max-width: 728px; width: auto; margin-left: auto; margin-right: auto;" v-html="adsenseContent"></div>
+    <div
+      style="
+        text-align: center;
+        height: 90px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        max-width: 728px;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      "
+      v-html="adsenseContent"
+    ></div>
     <!--    <p>
       <strong>Attenzione!</strong> per eseguire la ricerca serve il nome del
       corso corretto. Es. <strong>biotecnologie</strong> si trova sotto
@@ -108,13 +121,42 @@
       corso sarà segnato come test sì, in caso di accesso libero come test no.
     </p>
     <br />
-    <div style="text-align: center; height: 250px; overflow: hidden; max-width: 970px; width: auto; margin: auto;" v-html="adsenseBox"></div>
+    <div
+      style="
+        text-align: center;
+        height: 250px;
+        overflow: hidden;
+        max-width: 970px;
+        width: auto;
+        margin: auto;
+      "
+      v-html="adsenseBox"
+    ></div>
     <br />
   </div>
+  <Panel />
+  <Footer />
 </template>
 
 <script>
+import Nav from "../components/Navbar.vue";
+import Panel from "../components/Panellink.vue";
+import Footer from "../components/Footer.vue";
+import '../assets/style.scss';
+
 export default {
+  async beforeUpdate() {
+    try {
+      document.getElementById("navbar").setAttribute("class", `navbar-menu`);
+    } catch (e) {
+      //nulla
+    }
+  },
+  components: {
+    Nav,
+    Panel,
+    Footer
+  },
   data() {
     return {
       corsi: [],
@@ -125,7 +167,7 @@ export default {
       totalPages: 0,
       adsenseContent: "",
       adsenseBox: "",
-      timeOut: null
+      timeOut: null,
     };
   },
   async mounted() {
@@ -143,7 +185,9 @@ export default {
   },
   methods: {
     pubblicita() {
-      this.adsenseContent = document.getElementById("divadsensedisplaynone").innerHTML;
+      this.adsenseContent = document.getElementById(
+        "divadsensedisplaynone"
+      ).innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
   },
