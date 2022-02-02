@@ -142,7 +142,6 @@
 import Nav from "../components/Navbar.vue";
 import Panel from "../components/Panellink.vue";
 import Footer from "../components/Footer.vue";
-import '../assets/style.scss';
 
 export default {
   async beforeUpdate() {
