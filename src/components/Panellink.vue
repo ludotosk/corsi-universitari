@@ -62,8 +62,13 @@
       </div>
     </nav>
     <br />
-    <div class="absolute is-hidden-desktop has-text-right" v-bind:class="{hidden: nascondiBanner}">
-      <p @click.prevent="nascondiBanner = !nascondiBanner"><a href="#" class="has-text-danger m-4">Chiudi</a></p>
+    <div
+      class="absolute is-hidden-desktop has-text-right"
+      v-bind:class="{ hidden: nascondiBanner }"
+    >
+      <p @click.prevent="nascondiBanner = !nascondiBanner">
+        <a href="#" class="has-text-danger m-4">Chiudi</a>
+      </p>
       <div v-html="adsenseComparsa"></div>
     </div>
   </div>
@@ -77,8 +82,11 @@ export default {
       hideClassifica: false,
       hideInter: true,
       adsenseComparsa: "",
-      nascondiBanner: false
+      nascondiBanner: false,
     };
+  },
+  async mounted() {
+    this.timeOut = setInterval(this.pubblicita, 500);
   },
   methods: {
     livello() {
