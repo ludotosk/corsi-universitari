@@ -97,7 +97,7 @@ export default {
       this.hideClassifica = true;
     },
     pubblicita() {
-      this.adsenseContent = document.getElementById("divadcomparsa").innerHTML;
+      this.adsenseComparsa = document.getElementById("divadcomparsa").innerHTML;
     },
   },
 };
