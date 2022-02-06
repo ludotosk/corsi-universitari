@@ -47,10 +47,12 @@
         analytics.setAttribute('defer', '')
         document.body.appendChild(adsense);
 
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        (adsbygoogle = window.adsbygoogle || []).push({});
         document.addEventListener('DOMContentLoaded', (event) => {
+
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
+
             var analytics = document.createElement('script');
             analytics.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=G-WSK0D83FEJ&amp;l=dataLayer');
             analytics.setAttribute('defer', '')
@@ -63,7 +65,6 @@
             }
             gtag('js', new Date());
             gtag('config', 'G-WSK0D83FEJ');
-
         });
     </script>
 </body>
