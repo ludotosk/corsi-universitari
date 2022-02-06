@@ -52,57 +52,60 @@
       comune a tutti i nomi. Il resto della <strong>guida</strong> è sotto la
       tabella.
       </p> -->
-    <VTable
-      :data="corsi"
-      :filters="filters"
-      :pageSize="15"
-      @totalPagesChanged="totalPages = $event"
-      v-model:currentPage="currentPage"
-      class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
-    >
-      <template #head class="has-background-dark">
-        <th class="has-text-white has-background-dark">Corso di laurea</th>
-        <VTh
-          sortKey="t"
-          defaultSort="asc"
-          class="has-text-white has-background-dark"
-          >Livello</VTh
-        >
-        <VTh
-          sortKey="a"
-          defaultSort="asc"
-          class="has-text-white has-background-dark"
-          >Test</VTh
-        >
-        <VTh
-          sortKey="u"
-          defaultSort="asc"
-          class="has-text-white has-background-dark"
-          >Università</VTh
-        >
-      </template>
-      <template #body="{ rows }">
-        <tr v-for="row in rows" :key="row.guid">
-          <td class="has-text-weight-medium">
-            <a
-              :href="row.h"
-              target="_blank"
-              rel="noopener"
-              class="has-text-danger"
-              >{{ row.n }}</a
-            >
-          </td>
-          <td class="has-text-weight-medium">Corso di Laurea {{ row.t }}</td>
-          <td class="has-text-weight-medium">{{ row.a }}</td>
-          <td class="has-text-weight-medium">{{ row.u }}</td>
-        </tr>
-      </template>
-    </VTable>
-    <VTPagination
-      v-model:currentPage="currentPage"
-      :totalPages="totalPages"
-      :maxPageLinks="4"
-    />
+    <div style="min-height: 593px;">
+      <VTable
+        :data="corsi"
+        :filters="filters"
+        :pageSize="15"
+        @totalPagesChanged="totalPages = $event"
+        v-model:currentPage="currentPage"
+        class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
+      >
+        <template #head class="has-background-dark">
+          <th class="has-text-white has-background-dark">Corso di laurea</th>
+          <VTh
+            sortKey="t"
+            defaultSort="asc"
+            class="has-text-white has-background-dark"
+            >Livello</VTh
+          >
+          <VTh
+            sortKey="a"
+            defaultSort="asc"
+            class="has-text-white has-background-dark"
+            >Test</VTh
+          >
+          <VTh
+            sortKey="u"
+            defaultSort="asc"
+            class="has-text-white has-background-dark"
+            >Università</VTh
+          >
+        </template>
+        <template #body="{ rows }">
+          <tr v-for="row in rows" :key="row.guid">
+            <td class="has-text-weight-medium">
+              <a
+                :href="row.h"
+                target="_blank"
+                rel="noopener"
+                class="has-text-danger"
+                >{{ row.n }}</a
+              >
+            </td>
+            <td class="has-text-weight-medium">Corso di Laurea {{ row.t }}</td>
+            <td class="has-text-weight-medium">{{ row.a }}</td>
+            <td class="has-text-weight-medium">{{ row.u }}</td>
+          </tr>
+        </template>
+      </VTable>
+      <VTPagination
+        v-model:currentPage="currentPage"
+        :totalPages="totalPages"
+        :maxPageLinks="4"
+      />
+    </div>
+
     <br />
     <p>
       <strong>Corsiuniversitari.info </strong>è stato realizzato per aiutarti a
@@ -154,7 +157,7 @@ export default {
   components: {
     Nav,
     Panel,
-    Footer
+    Footer,
   },
   data() {
     return {
