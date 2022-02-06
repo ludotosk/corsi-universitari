@@ -26,9 +26,7 @@
           >
         </div>
         <div class="panel-block">
-          <a
-            href="/lista-corsi-di-laurea-magistrale"
-            class="has-text-black-ter"
+          <a href="/lista-corsi-di-laurea-magistrale" class="has-text-black-ter"
             >Corsi di laurea Magistrali</a
           >
         </div>
@@ -40,34 +38,34 @@
           >
         </div>
         <div class="panel-block">
-          <a
-            href="/migliori-universita-italiane"
-            class="has-text-black-ter"
+          <a href="/migliori-universita-italiane" class="has-text-black-ter"
             >Migliori università italiane</a
           >
         </div>
         <div class="panel-block">
-          <a
-            href="/migliori-universita-medicina"
-            class="has-text-black-ter"
+          <a href="/migliori-universita-medicina" class="has-text-black-ter"
             >Migliori università di medicina Italiane</a
           >
         </div>
       </div>
       <div v-bind:class="{ hidden: hideInter }">
         <div class="panel-block">
-          <a
-            href="/corsi-di-laurea-internazionali"
-            class="has-text-black-ter"
+          <a href="/corsi-di-laurea-internazionali" class="has-text-black-ter"
             >Corsi di laurea a carattere internazionale</a
           >
         </div>
         <div class="panel-block">
-          <a href="/corsi-di-laurea-online" class="has-text-black-ter">Corsi di laurea online</a>
+          <a href="/corsi-di-laurea-online" class="has-text-black-ter"
+            >Corsi di laurea online</a
+          >
         </div>
       </div>
     </nav>
     <br />
+    <div class="absolute is-hidden-desktop has-text-right" v-bind:class="{hidden: nascondiBanner}">
+      <p @click.prevent="nascondiBanner = !nascondiBanner"><a href="#" class="has-text-danger m-4">Chiudi</a></p>
+      <div v-html="adsenseComparsa"></div>
+    </div>
   </div>
 </template>
 
@@ -78,6 +76,8 @@ export default {
       hideLivello: true,
       hideClassifica: false,
       hideInter: true,
+      adsenseComparsa: "",
+      nascondiBanner: false
     };
   },
   methods: {
@@ -96,6 +96,21 @@ export default {
       this.hideInter = false;
       this.hideClassifica = true;
     },
+    pubblicita() {
+      this.adsenseContent = document.getElementById("divadcomparsa").innerHTML;
+    },
   },
 };
 </script>
+
+<style>
+div.absolute {
+  position: fixed;
+  bottom: 0;
+  height: 120px;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+</style>
