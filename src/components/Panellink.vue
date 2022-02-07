@@ -69,7 +69,18 @@
       <p @click.prevent="nascondiBanner = !nascondiBanner">
         <a href="#" class="has-text-danger m-4">Chiudi</a>
       </p>
-      <div v-html="adsenseComparsa"></div>
+      <div
+        style="
+          text-align: center;
+          height: 90px;
+          overflow: hidden;
+          max-width: 728px;
+          width: auto;
+          margin-left: auto;
+          margin-right: auto;
+        "
+        v-html="adsenseComparsa"
+      ></div>
     </div>
   </div>
 </template>
@@ -118,7 +129,5 @@ div.absolute {
   height: 120px;
   width: 100%;
   background-color: #fff;
-  text-align: center;
-  overflow: hidden;
 }
 </style>
