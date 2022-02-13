@@ -82,6 +82,27 @@
         v-html="adsenseComparsa"
       ></div>
     </div>
+<!--   <div
+      class="absolute is-desktop"
+      v-bind:class="{ hidden: nascondiBanner }"
+      style="background-color: yellow"
+    >
+      <p @click.prevent="nascondiBanner = !nascondiBanner">
+        <a href="#" class="has-text-danger m-4">Chiudi</a>
+      </p>
+      <div
+        style="
+          text-align: center;
+          height: 90px;
+          overflow: hidden;
+          max-width: 728px;
+          width: auto;
+          margin-left: auto;
+          margin-right: auto;
+        "
+        v-html="adsenseComparsa"
+      ></div>
+    </div> -->
   </div>
 </template>
 
