@@ -82,10 +82,9 @@
         v-html="adsenseComparsa"
       ></div>
     </div>
-<!--   <div
-      class="absolute is-desktop"
+    <div
+      class="absolute is-hidden-touch"
       v-bind:class="{ hidden: nascondiBanner }"
-      style="background-color: yellow"
     >
       <p @click.prevent="nascondiBanner = !nascondiBanner">
         <a href="#" class="has-text-danger m-4">Chiudi</a>
@@ -100,9 +99,9 @@
           margin-left: auto;
           margin-right: auto;
         "
-        v-html="adsenseComparsa"
+        v-html="comparsaDesktop"
       ></div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -138,6 +137,7 @@ export default {
     },
     pubblicita() {
       this.adsenseComparsa = document.getElementById("divadcomparsa").innerHTML;
+      this.comparsaDesktop = document.getElementById("comparsadesktop").innerHTML;
     },
   },
 };
@@ -150,5 +150,15 @@ div.absolute {
   height: 120px;
   width: 100%;
   background-color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  div.absolute {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 300px;
+    width: 336px;
+    background-color: #fff;
+  }
 }
 </style>
