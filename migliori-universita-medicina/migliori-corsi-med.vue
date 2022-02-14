@@ -1,7 +1,7 @@
 <template>
 <Nav />
   <div class="container is-fullhd" style="min-height: 100vh" >
-    <div
+<!--     <div
       style="
         text-align: center;
         height: 90px;
@@ -11,7 +11,7 @@
         width: auto;
       "
       v-html="adsenseContent"
-    ></div>
+    ></div> -->
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
       Migliori università di medicina [2020]
@@ -148,7 +148,7 @@
       >
     </p>
     <br />
-    <div
+  <!--  <div
       style="
         text-align: center;
         height: 250px;
@@ -158,7 +158,7 @@
         margin: auto;
       "
       v-html="adsenseBox"
-    ></div>
+    ></div>  -->
     <br />
   </div>
   <Panel />
@@ -188,16 +188,16 @@ export default {
     };
   },
   mounted() {
-    this.timeOut = setInterval(this.pubblicita, 500);
+   /*     this.timeOut = setInterval(this.pubblicita, 500); */
   },
-  methods: {
+/*   methods: {
     pubblicita() {
       this.adsenseContent = document.getElementById(
         "divadsensedisplaynone"
       ).innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
-  },
+  }, */
     async beforeUpdate() {
     try {
       document.getElementById("navbar").setAttribute("class", `navbar-menu`);

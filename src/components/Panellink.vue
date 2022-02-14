@@ -62,7 +62,7 @@
       </div>
     </nav>
     <br />
-    <div
+    <!--     <div
       class="absolute is-hidden-desktop has-text-right"
       v-bind:class="{ hidden: nascondiBanner }"
     >
@@ -101,7 +101,7 @@
         "
         v-html="comparsaDesktop"
       ></div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -116,9 +116,9 @@ export default {
       nascondiBanner: false,
     };
   },
-  async mounted() {
+/*   async mounted() {
     this.timeOut = setInterval(this.pubblicita, 500);
-  },
+  }, */
   methods: {
     livello() {
       this.hideLivello = false;
@@ -135,16 +135,16 @@ export default {
       this.hideInter = false;
       this.hideClassifica = true;
     },
-    pubblicita() {
+    /*     pubblicita() {
       this.adsenseComparsa = document.getElementById("divadcomparsa").innerHTML;
       this.comparsaDesktop = document.getElementById("comparsadesktop").innerHTML;
-    },
+    }, */
   },
 };
 </script>
 
 <style>
-div.absolute {
+/* div.absolute {
   position: fixed;
   bottom: 0;
   height: 120px;
@@ -160,5 +160,5 @@ div.absolute {
     width: 336px;
     background-color: #fff;
   }
-}
+} */
 </style>

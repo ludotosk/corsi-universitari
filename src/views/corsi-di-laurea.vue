@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div
+<!--      <div
       style="
         text-align: center;
         height: 90px;
@@ -43,7 +43,7 @@
         margin-right: auto;
       "
       v-html="adsenseContent"
-    ></div>
+    ></div> -->
     <!--    <p>
       <strong>Attenzione!</strong> per eseguire la ricerca serve il nome del
       corso corretto. Es. <strong>biotecnologie</strong> si trova sotto
@@ -124,7 +124,7 @@
       corso sarà segnato come test sì, in caso di accesso libero come test no.
     </p>
     <br />
-    <div
+<!-- <div
       style="
         text-align: center;
         height: 250px;
@@ -134,7 +134,7 @@
         margin: auto;
       "
       v-html="adsenseBox"
-    ></div>
+    ></div>  -->
     <br />
   </div>
   <Panel />
@@ -183,15 +183,15 @@ export default {
     } catch (e) {
       console.log(e);
     }
-    this.timeOut = setInterval(this.pubblicita, 500);
+/*     this.timeOut = setInterval(this.pubblicita, 500); */ 
   },
-  methods: {
+/*   methods: {
     pubblicita() {
       this.adsenseContent = document.getElementById(
         "divadsensedisplaynone"
       ).innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
-  },
+  }, */
 };
 </script>

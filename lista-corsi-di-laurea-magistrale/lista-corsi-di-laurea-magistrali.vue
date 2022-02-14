@@ -43,7 +43,7 @@
       comune a tutti i nomi. Il resto della <strong>guida</strong> è sotto la
       tabella.
     </p> -->
-    <div
+<!--     <div
       style="
         text-align: center;
         height: 90px;
@@ -55,7 +55,7 @@
         margin-right: auto;
       "
       v-html="adsenseContent"
-    ></div>
+    ></div> -->
     <div v-if="cerca == true">
       <br />
       <VTable
@@ -147,7 +147,7 @@
       </p>
     </div>
     <br />
-    <div
+  <!--  <div
       style="
         text-align: center;
         height: 250px;
@@ -157,7 +157,7 @@
         margin: auto;
       "
       v-html="adsenseBox"
-    ></div>
+    ></div>  -->
     <br />
   </div>
     <Panel />
@@ -195,21 +195,21 @@ export default {
     } catch (e) {
       console.log(e);
     }
-    this.timeOut = setInterval(this.pubblicita, 500);
+   /*     this.timeOut = setInterval(this.pubblicita, 500); */
   },
   watch: {
     "filters.n.value": function () {
       this.cerca = true;
     },
   },
-  methods: {
+/*   methods: {
     pubblicita() {
       this.adsenseContent = document.getElementById(
         "divadsensedisplaynone"
       ).innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
-  },
+  }, */
   async beforeUpdate() {
     try {
       document.getElementById("navbar").setAttribute("class", `navbar-menu`);

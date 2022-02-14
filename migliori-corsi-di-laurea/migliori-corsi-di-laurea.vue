@@ -43,7 +43,7 @@
         </div>
       </div>
     </div>
-    <div
+<!--     <div
       style="
         text-align: center;
         height: 90px;
@@ -55,7 +55,7 @@
         margin-right: auto;
       "
       v-html="adsenseContent"
-    ></div>
+    ></div> -->
     <VTable
       :data="corsi"
       :filters="filters"
@@ -101,7 +101,7 @@
       >
     </p>
     <br />
-    <div
+  <!--  <div
       style="
         text-align: center;
         height: 250px;
@@ -111,7 +111,7 @@
         margin: auto;
       "
       v-html="adsenseBox"
-    ></div>
+    ></div>  -->
     <br />
   </div>
   <Panel />
@@ -138,16 +138,16 @@ export default {
     };
   },
   mounted() {
-    this.timeOut = setInterval(this.pubblicita, 500);
+   /*     this.timeOut = setInterval(this.pubblicita, 500); */
   },
-  methods: {
+/*   methods: {
     pubblicita() {
       this.adsenseContent = document.getElementById(
         "divadsensedisplaynone"
       ).innerHTML;
       this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
     },
-  },
+  }, */
     async beforeUpdate() {
     try {
       document.getElementById("navbar").setAttribute("class", `navbar-menu`);
