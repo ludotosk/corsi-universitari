@@ -92,9 +92,9 @@
       <div
         style="
           text-align: center;
-          height: 90px;
+          height: 380px;
           overflow: hidden;
-          max-width: 728px;
+          max-width: 336px;
           width: auto;
           margin-left: auto;
           margin-right: auto;
