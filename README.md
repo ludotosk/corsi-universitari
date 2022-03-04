@@ -11,7 +11,7 @@ Some Vue.js dependencies don't work out of the box with Vite although as we can 
 ### Build optimization
 Normally you need to use something like Puppeteer to run the prerendering in the building phase, but there is a faster and lighter alternative to the prerendering. My solution is to provide for each Vue page one index.html file that is necessary to access the page: this allows us to get enough to using Vue router and Vue meta and have a lighter code.
 
-In my repo there is also the older version of this website made with Vue-CLi, you can test each solution and see the difference in the build size and the build time.
+In my repo there is also the [older version](https://github.com/ludotosk/corsi-universitari-old.git) of this website made with Vue-CLi, you can test each solution and see the difference in the build size and the build time.
 #### Downside
 Vite works in dev mode only with the main page, I don't know why I imagine there must be an explanation but I didn't find it.
 ## Front-end framework
