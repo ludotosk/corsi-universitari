@@ -1,6 +1,6 @@
 # [corsiuniversitari.info](https://www.corsiuniversitari.info/) website
 ## Why do I publish the source code of an online website?
-Because thanks to his optimization this website has gained first place in many google research queries, so it's an example of technical SEO. It's also an example of how is possible to avoid scaling problems without using server-side rendering. 
+Thanks to its optimization this website has gained first place in many google research queries, so it's an example of technical SEO. It's also an example of how is possible to avoid scaling problems without using server-side rendering. 
 ## List of optimizations
 ### CSS framework
 I have chosen Bulma because is a CSS framework without any javascript dependencies. In addition to Bulma, I have used purge CSS that provides CSS optimization during the build. So my CSS is light like custom CSS but with the convenience of a library like Bootstrap. I think this is the most important of all the optimizations I have done for this project.
