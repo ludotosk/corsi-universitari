@@ -183,7 +183,7 @@ export default {
   },
   async mounted() {
     try {
-      fetch("https://json-corsi-fastify.herokuapp.com/corsi?s=PISA")
+      fetch("https://ludotosk.it/corsi?s=PISA")
         .then((response) => response.json())
         .then((data) => {
           this.corsi = data;

@@ -187,7 +187,7 @@ export default {
   async mounted() {
     try {
       fetch(
-        "https://json-corsi-fastify.herokuapp.com/corsi?t=Triennale&t=Magistrale a Ciclo Unico"
+        "https://ludotosk.it/corsi?t=Triennale&t=Magistrale a Ciclo Unico"
       )
         .then((response) => response.json())
         .then((data) => {
