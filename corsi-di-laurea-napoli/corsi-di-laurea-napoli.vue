@@ -103,12 +103,14 @@
             <td class="has-text-weight-medium">{{ row.u }}</td>
           </tr>
         </template>
-      </VTable>
+    </VTable>
       <VTPagination
         v-model:currentPage="currentPage"
         :totalPages="totalPages"
         :maxPageLinks="4"
       />
+      <a href="https://t.me/CorsiDiLaureaBot" class="has-text-danger">Scarica il pdf della ricerca</a>
+      <br />
       <br />
       <!-- tolto da qua -->
       <p>

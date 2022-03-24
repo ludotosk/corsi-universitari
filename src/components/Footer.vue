@@ -6,7 +6,7 @@
           Sviluppato a Morgex - Valle d'Aosta da Ludovico Toscano. Contatti:
           <a href="mailto:corsiuniversitari@ludotosk.it" class="has-text-danger"
             >corsiuniversitari@ludotosk.it</a
-          >
+          >, <a href="https://www.fiverr.com/share/XWbxaV" class="has-text-danger">link Fiverr</a>
           oppure
           <a href="/contattami" class="has-text-danger">usa questa pagina</a>.
           Per leggere l'informativa sui cookie

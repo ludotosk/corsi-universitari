@@ -96,12 +96,13 @@
             <td>{{ row.u }}</td>
           </tr>
         </template>
-      </VTable>
+   </VTable>
       <VTPagination
-        v-model:currentPage.sync="currentPage"
+        v-model:currentPage="currentPage"
         :totalPages="totalPages"
         :maxPageLinks="4"
       />
+      <a href="https://t.me/CorsiDiLaureaBot" class="has-text-danger">Scarica il pdf della ricerca</a>
       <br />
       <p>
         Qui si possono trovare

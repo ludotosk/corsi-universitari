@@ -52,7 +52,7 @@
       comune a tutti i nomi. Il resto della <strong>guida</strong> è sotto la
       tabella.
       </p> -->
-    <div style="min-height: 593px;">
+    <div style="min-height: 650px;">
       <VTable
         :data="corsi"
         :filters="filters"
@@ -104,8 +104,8 @@
         :totalPages="totalPages"
         :maxPageLinks="4"
       />
+      <a v-if="carico" href="https://t.me/CorsiDiLaureaBot" class="has-text-danger">Scarica il pdf della ricerca</a>
     </div>
-
     <br />
     <p>
       <strong>Corsiuniversitari.info </strong>è stato realizzato per aiutarti a
@@ -170,6 +170,7 @@ export default {
       adsenseContent: "",
       adsenseBox: "",
       timeOut: null,
+      carico: false
     };
   },
   async mounted() {
