@@ -104,7 +104,7 @@
         :totalPages="totalPages"
         :maxPageLinks="4"
       />
-      <a v-if="carico" href="https://t.me/CorsiDiLaureaBot" class="has-text-danger">Scarica il pdf della ricerca</a>
+      <a v-if="carico" href="https://t.me/corsiuniversitari_bot" class="has-text-danger">Scarica il pdf della ricerca</a>
     </div>
     <br />
     <p>

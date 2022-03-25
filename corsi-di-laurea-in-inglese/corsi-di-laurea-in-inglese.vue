@@ -108,7 +108,7 @@
         :totalPages="totalPages"
         :maxPageLinks="4"
       />
-      <a href="https://t.me/CorsiDiLaureaBot" class="has-text-danger">Scarica il pdf della ricerca</a>
+      <a href="https://t.me/corsiuniversitari_bot" class="has-text-danger">Scarica il pdf della ricerca</a>
     </div>
     <table
       class="table is-bordered is-fullwidth is-hoverable"
