@@ -185,7 +185,7 @@ export default {
   },
   async mounted() {
     try {
-      fetch("https://ludotosk.it/corsi?s=BARI")
+      fetch("https://json-corsi-fastify.herokuapp.com/corsi?s=BARI")
         .then((response) => response.json())
         .then((data) => {
           this.corsi = data;

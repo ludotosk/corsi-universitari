@@ -10,7 +10,7 @@
     <meta name="description" content="Qui puoi trovare l'elenco di tutte le lauree triennali e magistrali a ciclo unico italiane. Visitaci per trovare altri strumenti.">
     <meta name="keywords" content="elenco lauree triennali, elenco laurea magistrali a ciclo unico">
     <link rel="canonical" href="https://www.corsiuniversitari.info/lauree-triennali-elenco">
-    <link rel="preload" href="https://ludotosk.it/corsi?t=Triennale&t=Magistrale a Ciclo Unico" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="https://json-corsi-fastify.herokuapp.com/corsi?t=Triennale&t=Magistrale a Ciclo Unico" as="fetch" crossorigin="anonymous">
     <script type="module">
         import { createApp } from 'vue'; import App from './lista-corsi-di-laurea-triennali.vue'; import SmartTable from 'vuejs-smart-table'; import '../src/assets/style.scss'; createApp(App).use(SmartTable).mount('#app');
     </script>

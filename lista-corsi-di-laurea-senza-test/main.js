@@ -1,6 +1,6 @@
 import '../src/assets/style.scss'
 
-fetch("https://ludotosk.it/tabella?t=Triennale&t=Magistrale%20a%20Ciclo%20Unico&&a=No")
+fetch("https://json-corsi-fastify.herokuapp.com/tabella?t=Triennale&t=Magistrale%20a%20Ciclo%20Unico&&a=No")
     .then((response) => response.text())
     .then((html) => {
         document.querySelector('#body').innerHTML = html
