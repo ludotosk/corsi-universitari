@@ -17,13 +17,15 @@
     </script>
     <link rel="preload" href="https://json-corsi-fastify.herokuapp.com/corsi" as="fetch" crossorigin="anonymous">
     <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v28/6xKtdSZaM9iE8KbpRA_hK1QN.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link href="https://www.googletagmanager.com" rel="preconnect">
     <script>
         partytown = {
             forward: ['dataLayer.push'],
         };
+        var analytics = document.createElement('script');
+        analytics.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=G-WSK0D83FEJ&amp;l=dataLayer');
+        analytics.setAttribute('defer', '')
+        document.body.appendChild(analytics);
     </script>
-    <link type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-WSK0D83FEJ&amp;l=dataLayer">
 </head>
 
 <body>
