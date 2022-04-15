@@ -25,3 +25,9 @@ package = "@netlify/plugin-sitemap"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cross-Origin-Embedder-Policy = "credentialless"
+    Cross-Origin-Opener-Policy = "same-origin"
