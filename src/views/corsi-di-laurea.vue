@@ -15,10 +15,9 @@
       <div class="field-body">
         <div class="field has-addons">
           <p class="control">
-            <label for="basic-url" class="button is-static has-text-weight-medium has-text-black">Filtra in base al
-              nome:</label>
+            <label for="basic-url" class="button is-static has-text-weight-medium has-text-black">Nome corso:</label>
           </p>
-          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.n.value" />
+          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.n.value"/>
         </div>
       </div>
     </div>

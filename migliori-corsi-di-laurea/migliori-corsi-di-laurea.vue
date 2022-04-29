@@ -30,10 +30,10 @@
             <label
               for="basic-url"
               class="button is-static has-text-weight-medium has-text-black"
-              >Filtra in base al nome:</label
+              >Nome corso:</label
             >
           </p>
-          <input
+        <input
             type="text"
             class="input"
             id="basic-url"

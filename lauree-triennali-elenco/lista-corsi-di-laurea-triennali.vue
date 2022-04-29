@@ -23,7 +23,7 @@
             <label
               for="basic-url"
               class="button is-static has-text-weight-medium has-text-black"
-              >Filtra in base al nome:</label
+              >Nome corso:</label
             >
           </p>
           <input
@@ -32,6 +32,7 @@
             id="basic-url"
             aria-describedby="basic-addon3"
             v-model="filters.n.value"
+            placeholder="Digita per visualizzare più dati" 
           />
         </div>
       </div>
