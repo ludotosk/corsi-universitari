@@ -360,14 +360,6 @@ export default {
   mounted() {
    /*     this.timeOut = setInterval(this.pubblicita, 500); */
   },
-/*   methods: {
-    pubblicita() {
-      this.adsenseContent = document.getElementById(
-        "divadsensedisplaynone"
-      ).innerHTML;
-      this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
-    },
-  }, */
   async beforeUpdate() {
     try {
       document.getElementById("navbar").setAttribute("class", `navbar-menu`);

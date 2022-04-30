@@ -17,7 +17,7 @@
           <p class="control">
             <label for="basic-url" class="button is-static has-text-weight-medium has-text-black">Nome corso:</label>
           </p>
-          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.n.value"/>
+          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.n.value" />
         </div>
       </div>
     </div>
@@ -42,7 +42,13 @@
       comune a tutti i nomi. Il resto della <strong>guida</strong> è sotto la
       tabella.
       </p> -->
-    <div style="min-height: 650px;">
+    <label for="città" class="checkbox"> <input type="checkbox" id="checkCittà" name="città"
+        @change="handleCitta($event)">
+      Filtra per città</label> | <a href="https://t.me/corsiuniversitari_bot" class="has-text-danger">Versione pdf</a> |
+    <a target="_blank" class="has-text-danger"
+      href="https://www.amazon.it/s?k=alpha+test&amp;__mk_it_IT=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;crid=3MDJLQLDLY1Q1&amp;sprefix=alpha+tes%252Caps%252C363&amp;ref=nb_sb_noss_2&_encoding=UTF8&tag=corsiuni-21&linkCode=ur2&linkId=73ca9312da8a5e682b0ad2a5ffdc8c77&camp=3414&creative=21718">Libri
+      per i test</a>
+    <div style="min-height: 600px;">
       <VTable :data="corsi" :filters="filters" :pageSize="15" @totalPagesChanged="totalPages = $event"
         v-model:currentPage="currentPage" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <template #head class="has-background-dark">
@@ -63,12 +69,6 @@
         </template>
       </VTable>
       <VTPagination v-model:currentPage="currentPage" :totalPages="totalPages" :maxPageLinks="4" />
-      <div v-if="carico">
-        <a href="https://t.me/corsiuniversitari_bot" class="has-text-danger">Scarica il pdf della
-          ricerca</a> | <a target="_blank" class="has-text-danger"
-          href="https://www.amazon.it/s?k=alpha+test&amp;__mk_it_IT=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;crid=3MDJLQLDLY1Q1&amp;sprefix=alpha+tes%252Caps%252C363&amp;ref=nb_sb_noss_2&_encoding=UTF8&tag=corsiuni-21&linkCode=ur2&linkId=73ca9312da8a5e682b0ad2a5ffdc8c77&camp=3414&creative=21718">Libri
-          per i test</a>
-      </div>
     </div>
     <br />
     <p>
@@ -133,8 +133,7 @@ export default {
       totalPages: 0,
       adsenseContent: "",
       adsenseBox: "",
-      timeOut: null,
-      carico: false
+      timeOut: null
     };
   },
   async mounted() {
@@ -143,20 +142,24 @@ export default {
         .then((response) => response.json())
         .then((data) => {
           this.corsi = data;
-          this.carico = true;
         });
     } catch (e) {
       console.log(e);
     }
-    /*     this.timeOut = setInterval(this.pubblicita, 500); */
   },
-  /*   methods: {
-      pubblicita() {
-        this.adsenseContent = document.getElementById(
-          "divadsensedisplaynone"
-        ).innerHTML;
-        this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
-      },
-    }, */
+  methods: {
+    handleCitta(e) {
+      if (e.target.checked) {
+        this.filters = {
+          n: { value: "", keys: ["s"] },
+        }
+      } else {
+        this.filters = {
+          n: { value: "", keys: ["n"] },
+        }
+      }
+    }
+  }
+
 };
 </script>

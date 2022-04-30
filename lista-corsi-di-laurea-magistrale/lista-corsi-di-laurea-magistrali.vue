@@ -19,20 +19,10 @@
       <div class="field-body">
         <div class="field has-addons">
           <p class="control">
-            <label
-              for="basic-url"
-              class="button is-static has-text-weight-medium has-text-black"
-              >Nome corso:</label
-            >
+            <label for="basic-url" class="button is-static has-text-weight-medium has-text-black">Nome corso:</label>
           </p>
-          <input
-            type="text"
-            class="input"
-            id="basic-url"
-            aria-describedby="basic-addon3"
-            v-model="filters.n.value"
-            placeholder="Digita per visualizzare più dati"
-          />
+          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.n.value"
+            placeholder="Digita per visualizzare più dati" />
         </div>
       </div>
     </div>
@@ -44,83 +34,36 @@
       comune a tutti i nomi. Il resto della <strong>guida</strong> è sotto la
       tabella.
     </p> -->
-<!--     <div
-      style="
-        text-align: center;
-        height: 90px;
-        margin-bottom: 10px;
-        overflow: hidden;
-        max-width: 728px;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-      "
-      v-html="adsenseContent"
-    ></div> -->
+
+    <label for="colonne" class="checkbox"> <input type="checkbox" id="checkColonne" name="colonne" v-model="cerca"> Mostra più dati</label> |
+    <a href="https://t.me/corsiuniversitari_bot" class="has-text-danger">Versione pdf</a> | <a target="_blank"
+      class="has-text-danger"
+      href="https://www.amazon.it/s?k=alpha+test&amp;__mk_it_IT=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;crid=3MDJLQLDLY1Q1&amp;sprefix=alpha+tes%252Caps%252C363&amp;ref=nb_sb_noss_2&_encoding=UTF8&tag=corsiuni-21&linkCode=ur2&linkId=73ca9312da8a5e682b0ad2a5ffdc8c77&camp=3414&creative=21718">Libri
+      per i test</a>
     <div v-if="cerca == true">
-      <br />
-      <VTable
-        :data="corsi"
-        :filters="filters"
-        :pageSize="15"
-        @totalPagesChanged="totalPages = $event"
-        v-model:currentPage.sync="currentPage"
-        class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
-      >
+      <VTable :data="corsi" :filters="filters" :pageSize="15" @totalPagesChanged="totalPages = $event"
+        v-model:currentPage.sync="currentPage" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <template #head class="has-background-dark">
           <th class="has-text-white has-background-dark">Corso di laurea</th>
-          <VTh
-            class="has-text-white has-background-dark"
-            sortKey="s"
-            defaultSort="asc"
-            >Città</VTh
-          >
-          <VTh
-            class="has-text-white has-background-dark"
-            sortKey="a"
-            defaultSort="asc"
-            >Test</VTh
-          >
-          <VTh
-            class="has-text-white has-background-dark"
-            sortKey="u"
-            defaultSort="asc"
-            >Università</VTh
-          >
+          <VTh class="has-text-white has-background-dark" sortKey="s" defaultSort="asc">Città</VTh>
+          <VTh class="has-text-white has-background-dark" sortKey="a" defaultSort="asc">Test</VTh>
+          <VTh class="has-text-white has-background-dark" sortKey="u" defaultSort="asc">Università</VTh>
         </template>
         <template #body="{ rows }">
           <tr v-for="row in rows" :key="row.guid">
             <td>
-              <a
-                :href="row.h"
-                target="_blank"
-                rel="noopener"
-                class="has-text-danger"
-                >{{ row.n }}</a
-              >
+              <a :href="row.h" target="_blank" rel="noopener" class="has-text-danger">{{ row.n }}</a>
             </td>
             <td>{{ row.s }}</td>
             <td>{{ row.a }}</td>
             <td>{{ row.u }}</td>
           </tr>
         </template>
-   </VTable>
-      <VTPagination
-        v-model:currentPage="currentPage"
-        :totalPages="totalPages"
-        :maxPageLinks="4"
-      />
-    
-        <a href="https://t.me/corsiuniversitari_bot" class="has-text-danger">Scarica il pdf della
-          ricerca</a> | <a target="_blank" class="has-text-danger"
-          href="https://www.amazon.it/s?k=alpha+test&amp;__mk_it_IT=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;crid=3MDJLQLDLY1Q1&amp;sprefix=alpha+tes%252Caps%252C363&amp;ref=nb_sb_noss_2&_encoding=UTF8&tag=corsiuni-21&linkCode=ur2&linkId=73ca9312da8a5e682b0ad2a5ffdc8c77&camp=3414&creative=21718">Libri
-          per i test</a>
+      </VTable>
+      <VTPagination v-model:currentPage="currentPage" :totalPages="totalPages" :maxPageLinks="4" />
 
     </div>
-    <table
-      class="table is-bordered is-hoverable is-fullwidth"
-      v-if="cerca == false"
-    >
+    <table class="table is-bordered is-hoverable is-fullwidth" v-if="cerca == false">
       <thead class="has-background-dark">
         <th class="has-text-white">Corso di laurea</th>
         <!--         <th class="has-text-white">Città</th>
@@ -154,7 +97,7 @@
       </p>
     </div>
     <br />
-  <!--  <div
+    <!--  <div
       style="
         text-align: center;
         height: 250px;
@@ -167,7 +110,7 @@
     ></div>  -->
     <br />
   </div>
-    <Panel />
+  <Panel />
   <Footer />
 </template>
 
@@ -202,21 +145,20 @@ export default {
     } catch (e) {
       console.log(e);
     }
-   /*     this.timeOut = setInterval(this.pubblicita, 500); */
+    /*     this.timeOut = setInterval(this.pubblicita, 500); */
   },
   watch: {
     "filters.n.value": function () {
       this.cerca = true;
     },
   },
-/*   methods: {
-    pubblicita() {
-      this.adsenseContent = document.getElementById(
-        "divadsensedisplaynone"
-      ).innerHTML;
-      this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
-    },
-  }, */
+  methods: {
+    handleCheckbox(e) {
+      if (e.target.checked) {
+        this.cerca = e.target.checked;
+      }
+    }
+  },
   async beforeUpdate() {
     try {
       document.getElementById("navbar").setAttribute("class", `navbar-menu`);

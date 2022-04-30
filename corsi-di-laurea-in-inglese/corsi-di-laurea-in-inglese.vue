@@ -34,20 +34,12 @@
       comune a tutti i nomi. Il resto della <strong>guida</strong> è sotto la
       tabella.
     </p> -->
-    <!--     <div
-      style="
-        text-align: center;
-        height: 90px;
-        margin-bottom: 10px;
-        overflow: hidden;
-        max-width: 728px;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-      "
-      v-html="adsenseContent"
-    ></div> -->
-    <div v-if="cambiaTabella">
+    <label for="colonne" class="checkbox"> <input type="checkbox" id="checkColonne" name="colonne" v-model="cerca"> Mostra più dati</label> |
+    <a href="https://t.me/corsiuniversitari_bot" class="has-text-danger">Versione pdf</a> | <a target="_blank"
+      class="has-text-danger"
+      href="https://www.amazon.it/s?k=alpha+test&amp;__mk_it_IT=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;crid=3MDJLQLDLY1Q1&amp;sprefix=alpha+tes%252Caps%252C363&amp;ref=nb_sb_noss_2&_encoding=UTF8&tag=corsiuni-21&linkCode=ur2&linkId=73ca9312da8a5e682b0ad2a5ffdc8c77&camp=3414&creative=21718">Libri
+      per i test</a>
+    <div v-if="cerca">
       <VTable :data="corsi" :filters="filters" :pageSize="15" @totalPagesChanged="totalPages = $event"
         v-model:currentPage.sync="currentPage" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <template #head class="has-background-dark">
@@ -68,14 +60,8 @@
         </template>
       </VTable>
       <VTPagination v-model:currentPage="currentPage" :totalPages="totalPages" :maxPageLinks="4" />
-
-      <a href="https://t.me/corsiuniversitari_bot" class="has-text-danger">Scarica il pdf della
-        ricerca</a> | <a target="_blank" class="has-text-danger"
-        href="https://www.amazon.it/s?k=alpha+test&amp;__mk_it_IT=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;crid=3MDJLQLDLY1Q1&amp;sprefix=alpha+tes%252Caps%252C363&amp;ref=nb_sb_noss_2&_encoding=UTF8&tag=corsiuni-21&linkCode=ur2&linkId=73ca9312da8a5e682b0ad2a5ffdc8c77&camp=3414&creative=21718">Libri
-        per i test</a>
-
     </div>
-    <table class="table is-bordered is-fullwidth is-hoverable" v-if="!cambiaTabella">
+    <table class="table is-bordered is-fullwidth is-hoverable" v-if="!cerca">
       <thead class="has-background-dark">
         <th class="has-text-white">Corso di laurea</th>
         <!--    <th class="has-text-white">Livello</th>
@@ -94,7 +80,7 @@
       </tbody>
     </table>
     <br />
-    <div v-if="cambiaTabella">
+    <div v-if="cerca">
       <p>
         <strong> Come funziona?</strong> È molto semplice, basta digitare nella
         barra di ricerca es. "data science" e comparirà la lista di tutti i
@@ -142,7 +128,6 @@ export default {
       uni: "in inglese",
       corsi: [],
       cerca: false,
-      cambiaTabella: false,
       adsenseContent: "",
       adsenseBox: "",
       timeOut: null,
@@ -163,17 +148,9 @@ export default {
   },
   watch: {
     "filters.n.value": function () {
-      this.cambiaTabella = true;
+      this.cerca = true;
     },
   },
-  /*   methods: {
-      pubblicita() {
-        this.adsenseContent = document.getElementById(
-          "divadsensedisplaynone"
-        ).innerHTML;
-        this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
-      },
-    }, */
   async beforeUpdate() {
     try {
       document.getElementById("navbar").setAttribute("class", `navbar-menu`);

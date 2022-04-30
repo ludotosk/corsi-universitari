@@ -1,6 +1,6 @@
 <template>
   <Nav />
-  <div class="container is-fullhd" style="min-height: 100vh" >
+  <div class="container is-fullhd" style="min-height: 100vh">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
       Migliori lauree per trovare lavoro [2020]
@@ -19,67 +19,25 @@
       andare sul link in fondo alla tabella.
       <a href="/migliori-universita-italiane" class="has-text-danger">
         Se invece vuoi scoprire quali sono le migliori università italiane
-        clicca qui</a
-      >!
+        clicca qui</a>!
     </p>
     <br />
     <div class="field is-horizontal">
       <div class="field-body">
         <div class="field has-addons">
           <p class="control">
-            <label
-              for="basic-url"
-              class="button is-static has-text-weight-medium has-text-black"
-              >Nome corso:</label
-            >
+            <label for="basic-url" class="button is-static has-text-weight-medium has-text-black">Nome corso:</label>
           </p>
-        <input
-            type="text"
-            class="input"
-            id="basic-url"
-            aria-describedby="basic-addon3"
-            v-model="filters.n.value"
-          />
+          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.n.value" />
         </div>
       </div>
     </div>
-<!--     <div
-      style="
-        text-align: center;
-        height: 90px;
-        margin-bottom: 10px;
-        overflow: hidden;
-        max-width: 728px;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-      "
-      v-html="adsenseContent"
-    ></div> -->
-    <VTable
-      :data="corsi"
-      :filters="filters"
-      class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth"
-    >
+    <VTable :data="corsi" :filters="filters" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
       <template #head class="has-background-dark">
-        <VTh
-          sortKey="Classe"
-          defaultSort="asc"
-          class="has-text-white has-background-dark"
-          >Classe di laurea</VTh
-        >
-        <VTh
-          sortKey="Occupazione"
-          defaultSort="asc"
-          class="has-text-white has-background-dark"
-          >Occupazione %</VTh
-        >
-        <VTh
-          sortKey="Stipendio"
-          defaultSort="asc"
-          class="has-text-white has-background-dark"
-          >Stipendio medio netto €</VTh
-        >
+        <VTh sortKey="Classe" defaultSort="asc" class="has-text-white has-background-dark">Classe di laurea</VTh>
+        <VTh sortKey="Occupazione" defaultSort="asc" class="has-text-white has-background-dark">Occupazione %</VTh>
+        <VTh sortKey="Stipendio" defaultSort="asc" class="has-text-white has-background-dark">Stipendio medio netto €
+        </VTh>
       </template>
       <template #body="{ rows }">
         <tr v-for="row in rows" :key="row.guid">
@@ -92,16 +50,11 @@
       </template>
     </VTable>
     <p>
-      <a
-        href="https://www2.almalaurea.it/cgi-php/universita/statistiche/tendine.php?anno=2020&config=occupazione"
-        rel="noopener"
-        target="_blank"
-        class="has-text-danger"
-        >Fonte: alma laurea</a
-      >
+      <a href="https://www2.almalaurea.it/cgi-php/universita/statistiche/tendine.php?anno=2020&config=occupazione"
+        rel="noopener" target="_blank" class="has-text-danger">Fonte: alma laurea</a>
     </p>
     <br />
-  <!--  <div
+    <!--  <div
       style="
         text-align: center;
         height: 250px;
@@ -138,17 +91,9 @@ export default {
     };
   },
   mounted() {
-   /*     this.timeOut = setInterval(this.pubblicita, 500); */
+    /*     this.timeOut = setInterval(this.pubblicita, 500); */
   },
-/*   methods: {
-    pubblicita() {
-      this.adsenseContent = document.getElementById(
-        "divadsensedisplaynone"
-      ).innerHTML;
-      this.adsenseBox = document.getElementById("divadsensebox").innerHTML;
-    },
-  }, */
-    async beforeUpdate() {
+  async beforeUpdate() {
     try {
       document.getElementById("navbar").setAttribute("class", `navbar-menu`);
     } catch (e) {
