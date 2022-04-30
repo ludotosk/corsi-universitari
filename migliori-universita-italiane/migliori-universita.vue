@@ -54,7 +54,7 @@
             class="input"
             id="basic-url"
             aria-describedby="basic-addon3"
-            v-model="filters.n.value"
+            v-model="filters.filtro.value"
           />
         </div>
       </div>
@@ -350,7 +350,7 @@ export default {
       strutture: false,
       corsi: corsi,
       filters: {
-        n: { value: "", keys: ["ateneo"] },
+        filtro: { value: "", keys: ["ateneo"] },
       },
       adsenseContent: "",
       adsenseBox: "",

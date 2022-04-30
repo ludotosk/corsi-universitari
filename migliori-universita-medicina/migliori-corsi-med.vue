@@ -42,7 +42,7 @@
           <p class="control">
             <label for="basic-url" class="button is-static has-text-weight-medium has-text-black">Nome corso:</label>
           </p>
-          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.n.value" />
+          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.filtro.value" />
         </div>
       </div>
     </div>
@@ -123,7 +123,7 @@ export default {
       diciannove: false,
       diciotto: false,
       filters: {
-        n: { value: "", keys: ["uni"] },
+        filtro: { value: "", keys: ["uni"] },
       },
       adsenseContent: "",
       adsenseBox: "",

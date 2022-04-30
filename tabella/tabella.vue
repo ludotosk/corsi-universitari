@@ -15,7 +15,7 @@
             class="input"
             id="basic-url"
             aria-describedby="basic-addon3"
-            v-model="filters.n.value"
+            v-model="filters.filtro.value"
           />
         </div>
       </div>
@@ -87,7 +87,7 @@ export default {
     return {
       corsi: [],
       filters: {
-        n: { value: "", keys: ["n"] },
+        filtro: { value: "", keys: ["n"] },
       },
       currentPage: 1,
       totalPages: 0,

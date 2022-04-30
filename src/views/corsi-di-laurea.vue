@@ -17,7 +17,7 @@
           <p class="control">
             <label for="basic-url" class="button is-static has-text-weight-medium has-text-black">Nome corso:</label>
           </p>
-          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.n.value" />
+          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.filtro.value" />
         </div>
       </div>
     </div>
@@ -127,7 +127,7 @@ export default {
     return {
       corsi: [],
       filters: {
-        n: { value: "", keys: ["n"] },
+        filtro: { value: "", keys: ["n"] },
       },
       currentPage: 1,
       totalPages: 0,
@@ -151,11 +151,11 @@ export default {
     handleCitta(e) {
       if (e.target.checked) {
         this.filters = {
-          n: { value: "", keys: ["s"] },
+          filtro: { value: "", keys: ["s"] },
         }
       } else {
         this.filters = {
-          n: { value: "", keys: ["n"] },
+          filtro: { value: "", keys: ["n"] },
         }
       }
     }

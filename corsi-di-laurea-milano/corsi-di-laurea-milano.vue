@@ -31,7 +31,7 @@
             class="input"
             id="basic-url"
             aria-describedby="basic-addon3"
-            v-model="filters.n.value"
+            v-model="filters.filtro.value"
             placeholder="Digita per visualizzare più dati" 
           />
         </div>
@@ -166,7 +166,7 @@ export default {
   data() {
     return {
       filters: {
-        n: { value: "", keys: ["n"] },
+        filtro: { value: "", keys: ["n"] },
       },
       currentPage: 1,
       totalPages: 0,
@@ -192,7 +192,7 @@ export default {
    /*     this.timeOut = setInterval(this.pubblicita, 500); */
   },
   watch: {
-    "filters.n.value": function () {
+    "filters.filtro.value": function () {
       this.cerca = true;
     },
   },
