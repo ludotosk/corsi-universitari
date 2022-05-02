@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Università a Napoli, Corsi di laurea [2021/2022]</title>
+    <meta name="description" content="In questo sito potrai trovare rapidamente tutti i corsi di laurea napoli, tutti raggruppati su una comoda tabella.">
+    <meta name="keywords" content="Corsi di laurea, Corso di laurea, Corsi di laurea napoli">
+    <link rel="canonical" href="https://www.corsiuniversitari.info/corsi-di-laurea-napoli">
+    <link rel="preload" href="https://json-corsi-fastify.herokuapp.com/corsi?s=NAPOLI" as="fetch" crossorigin="anonymous">
+    <script type="module">
+        import { createApp } from 'vue'; import App from './corsi-di-laurea-napoli.vue'; import SmartTable from 'vuejs-smart-table'; import '../assets/style.scss'; createApp(App).use(SmartTable).mount('#app');
+    </script>
+    <link rel="preload" href="https://fonts.gstatic.com/s/quicksand/v28/6xKtdSZaM9iE8KbpRA_hK1QN.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link href="https://www.googletagmanager.com" rel="preconnect">
+
+</head>
+
+<body>
+    <div id="app"></div>
+
+
+    <script defer>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var analytics = document.createElement('script');
+            analytics.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=G-WSK0D83FEJ&amp;l=dataLayer');
+            analytics.setAttribute('defer', '')
+            document.body.appendChild(analytics);
+
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                window.dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-WSK0D83FEJ');
+        });
+    </script>
+</body>
+
+</html>

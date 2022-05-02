@@ -1,0 +1,52 @@
+@import "../assets/style.scss";
+#pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+}
+
+#brand {
+    margin: 1em;
+}
+
+#logo {
+    background-color: white;
+    border-radius: 50%;
+    margin: 1em;
+}
+
+#firma {
+    all: unset;
+    position: absolute;
+    bottom: 1em;
+    cursor: pointer;
+}
+
+body {
+    background-color: #3d3b3c;
+    color: white;
+    font-weight: bold;
+}
+
+a {
+    padding: 1em;
+    margin: 0.5em;
+    width: calc(100% - 1em);
+    max-width: 680px;
+    border-radius: 0px;
+    background-color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: 0.25s;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+}
+
+a:hover {
+    background-color: #3d3b3c;
+    color: white;
+}
