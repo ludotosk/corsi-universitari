@@ -13,11 +13,19 @@
     <br />
     <div class="field is-horizontal">
       <div class="field-body">
-        <div class="field has-addons">
+        <div class="field has-addons" v-if="!attivaCitta">
           <p class="control">
             <label for="basic-url" class="button is-static has-text-weight-medium has-text-black">Nome corso:</label>
           </p>
-          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.filtro.value" />
+          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.filtro.value"
+            placeholder="Nome corso" />
+        </div>
+        <div class="field has-addons" v-if="attivaCitta">
+          <p class="control">
+            <label for="basic-url" class="button is-static has-text-weight-medium has-text-black">Nome città:</label>
+          </p>
+          <input type="text" class="input" id="basic-url" aria-describedby="basic-addon3" v-model="filters.filtro.value"
+            placeholder="Nome città" />
         </div>
       </div>
     </div>
@@ -43,7 +51,7 @@
       tabella.
       </p> -->
     <label for="città" class="checkbox"> <input type="checkbox" id="checkCittà" name="città"
-        @change="handleCitta($event)">
+        @change="handleCitta($event)" v-model="attivaCitta">
       Filtra per città</label> | <a href="https://t.me/corsiuniversitari_bot" class="has-text-danger">Versione pdf</a> |
     <a target="_blank" class="has-text-danger"
       href="https://www.amazon.it/s?k=alpha+test&amp;__mk_it_IT=%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591&amp;crid=3MDJLQLDLY1Q1&amp;sprefix=alpha+tes%252Caps%252C363&amp;ref=nb_sb_noss_2&_encoding=UTF8&tag=corsiuni-21&linkCode=ur2&linkId=73ca9312da8a5e682b0ad2a5ffdc8c77&camp=3414&creative=21718">Libri
@@ -133,7 +141,8 @@ export default {
       totalPages: 0,
       adsenseContent: "",
       adsenseBox: "",
-      timeOut: null
+      timeOut: null,
+      attivaCitta: false
     };
   },
   async mounted() {
