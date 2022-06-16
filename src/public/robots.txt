@@ -9,5 +9,6 @@ Disallow: /comunita
 Disallow: /tabella
 Disallow: /corsi-di-laurea-online
 Disallow: /migliori-universita-medicina
+Disallow: /master
 
 Sitemap: http://www.corsiuniversitari.info/sitemap.xml

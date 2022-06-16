@@ -41,6 +41,7 @@ export default defineConfig({
                 pol: resolve(root, 'cookie-policy/index.html'),
                 tabella: resolve(root, 'tabella/index.html'),
                 genova: resolve(root, 'corsi-di-laurea-genova/index.html'),
+                master: resolve(root, 'master/index.html')
             }
         }
     }
