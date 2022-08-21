@@ -3,7 +3,7 @@
   <div class="container is-fullhd" style="min-height: 100vh">
     <br />
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
-      Università {{ uni }}, Corsi di Laurea [2021/2022] 🇬🇧
+      Università {{ uni }}, Corsi di Laurea [2022/2023] 🇬🇧
     </h1>
     <h2 class="has-text-centered is-size-3 has-text-dark has-text-left">
       Quali sono i Corsi di Laurea {{ uni }} in Italia? Ecco la lista!
