@@ -14,7 +14,7 @@
       v-html="adsenseContent"
     ></div> -->
     <h1 class="has-text-centered is-size-2 has-text-dark has-text-left">
-      Migliori università Italiane 2021/2022
+      Migliori università Italiane 2022/2023
     </h1>
     <h2 class="has-text-centered is-size-3 has-text-dark has-text-left">
       Qual'è la migliore università in Italia?
@@ -26,8 +26,8 @@
         rel="noopener"
         class="has-text-danger"
         target="_blank"
-        href="https://www.censis.it/formazione/la-classifica-censis-delle-universit%C3%A0-italiane-edizione-2021/20222021/2022/gli-atenei-statali"
-        >il rapporto Censis 2021/2022</a
+        href="https://www.censis.it/formazione/la-classifica-censis-delle-universit%C3%A0-italiane-edizione-20222023/gli-atenei-statali"
+        >il rapporto Censis 2022/2023</a
       >! Prima di lasciarvi alla tabella vi faccio notare come non ci siano i
       dati di occupabilità per le università non statali, quindi nella colonna
       troverete 0 come punteggio. Come potrete vedere il punteggio va da 0 a 110
@@ -264,7 +264,7 @@
         class="has-text-danger"
         rel="noopener"
         target="_blank"
-        href="https://www.censis.it/formazione/la-classifica-censis-delle-universit%C3%A0-italiane-edizione-20212022/gli-atenei-statali"
+        href="https://www.censis.it/formazione/la-classifica-censis-delle-universit%C3%A0-italiane-edizione-20222023/gli-atenei-statali"
         >Fonte: Censis</a
       >
     </p>
