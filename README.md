@@ -6,7 +6,7 @@ Thanks to its optimization this website has gained first place in many google re
 I chose Bulma because it is a CSS framework without any javascript dependencies. In addition to Bulma, I used purge CSS that provides CSS optimization during the build. So my CSS is light like custom CSS but with the convenience of a library like Bootstrap. I think this is the most important of all the optimizations I have done so far.
 ### Bundler
 The bundler I chose is Vite because it is faster and a lot easier than Webpack.
-#### Downsidem
+#### Downside
 Some Vue.js dependencies don't work out of the box with Vite although as we can see it isn't an issue in this case, since I already planned to use as few dependencies as possible.
 ### Build optimization
 Normally you need to use something like Puppeteer to run the prerendering in the building phase, but there is a faster and lighter alternative to the prerendering. My solution is to provide for each Vue page one index.html file that is necessary to access the page: this allows us to get enough to using Vue router and Vue meta and have a lighter code.
