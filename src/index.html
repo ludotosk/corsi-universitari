@@ -24,13 +24,20 @@
 
 
     <script defer>
-        window.dataLayer = window.dataLayer || [];
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var analytics = document.createElement('script');
+            analytics.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=G-WSK0D83FEJ&amp;l=dataLayer');
+            analytics.setAttribute('defer', '')
+            document.body.appendChild(analytics);
 
-        function gtag() {
-            window.dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-WSK0D83FEJ');
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                window.dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-WSK0D83FEJ');
+        });
     </script>
 </body>
 

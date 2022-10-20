@@ -149,11 +149,6 @@ export default {
         .then((data) => {
           this.corsi = data;
         });
-        
-      var analytics = document.createElement('script');
-      analytics.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=G-WSK0D83FEJ&amp;l=dataLayer');
-      analytics.setAttribute('defer', '')
-      document.body.appendChild(analytics);
     } catch (e) {
       console.log(e);
     }
